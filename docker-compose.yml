@@ -5,9 +5,10 @@ services:
     ##      : docker-compose up (-d) serve
     serve:
         command: yarn serve
-        image: node:lts
+        image: node:16-buster
         ports:
-            - '3000:3000'
+            - 59840:3000
+            - 59841:3001
         user: '1000'
         volumes:
             - ./:/src
@@ -16,7 +17,7 @@ services:
     ## usage: docker-compose run --rm install
     install:
         command: yarn install
-        image: node:lts
+        image: node:16-buster
         user: '1000'
         volumes:
             - ./:/src
