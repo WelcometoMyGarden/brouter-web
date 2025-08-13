@@ -44,7 +44,7 @@ BR.confLayers.getPropertyOverrides = function() {
             'mapUrl': 'https://www.opencyclemap.org/?zoom={zoom}&lat={lat}&lon={lon}&layers=B0000'
         },
         'transport': {
-            'name': 'Transport (Thunderforest)',
+            'name': i18next.t('map.layer.transport'),
             'nameShort': 'Transport',
           // add Thunderforest API key variable
             'url': 'https://{switch:a,b,c}.tile.thunderforest.com/transport/{zoom}/{x}/{y}.png?apikey={keys_thunderforest}',

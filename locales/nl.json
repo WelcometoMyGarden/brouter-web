@@ -136,11 +136,12 @@
       "hillshading": "Bergschaduw",
       "osm": "OpenStreetMap",
       "osmde": "OpenStreetMap.de",
-      "outdoors": "Outdoors (Thunderforest)",
+      "outdoors": "Outdoors",
       "route-quality": "Routekwaliteitscodering",
       "stamen-terrain": "Terrain (Stamen)",
       "strava-segments": "Strava segmenten",
-      "topo": "OpenTopoMap"
+      "topo": "OpenTopoMap",
+      "transport": "Treinnetwerk"
     },
     "loading": "Laden…",
     "locate-me": "Laat zien waar ik ben",

@@ -177,11 +177,12 @@
       "hillshading": "Hillshading",
       "osm": "OpenStreetMap",
       "osmde": "OpenStreetMap.de",
-      "outdoors": "Outdoors (Thunderforest)",
+      "outdoors": "Outdoors",
       "route-quality": "Route quality coding",
       "stamen-terrain": "Terrain (Stamen)",
       "strava-segments": "Strava segments",
-      "topo": "OpenTopoMap"
+      "topo": "OpenTopoMap",
+      "transport": "Train network"
     },
     "loading": "Loading…",
     "locate-me": "Show me where I am",

@@ -136,11 +136,12 @@
       "hillshading": "Relief avec ombre",
       "osm": "OpenStreetMap",
       "osmde": "OpenStreetMap.de",
-      "outdoors": "Extérieur (Thunderforest)",
+      "outdoors": "Extérieur",
       "route-quality": "Chiffrage de la qualité de route",
       "stamen-terrain": "Terrain (Stamen)",
       "strava-segments": "Segments Strava",
-      "topo": "OpenTopoMap"
+      "topo": "OpenTopoMap",
+      "transport": "Réseau ferroviaire"
     },
     "loading": "Chargement…",
     "locate-me": "Où suis-je ?",
