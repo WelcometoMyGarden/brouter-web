@@ -127,7 +127,7 @@
     "hiking": "Randonnée",
     "layer": {
       "bing": "Imagerie aérienne BING",
-      "cycle": "OpenCycleMap (Thunderf.)",
+      "cycle": "OpenCycleMap",
       "cycling": "Cycling (Sentiers balisés)",
       "digitalglobe": "Imagerie récente DigitalGlobe",
       "esri": "Imagerie mondiale Esri",
@@ -213,7 +213,7 @@
       "vm-forum-velomobil-schnell": "Vélomobile (rapide)"
     },
     "profile-tooltip": "\n(touche {{key}} pour échanger)",
-    "tutorial": "Tu",
+    "tutorial": "Tutoriel",
     "wtmg": "Allez sur WTMG"
   },
   "searchfav": {
