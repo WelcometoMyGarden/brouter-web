@@ -85,7 +85,9 @@ var paths = {
     styles: mainNpmFiles()
         .filter((f) => RegExp('.*\\.css', 'i').test(f) && !RegExp('.*\\.min\\.css', 'i').test(f))
         .concat('css/*.css'),
-    images: mainNpmFiles().filter((f) => RegExp('.*.+(png|gif|svg)', 'i').test(f)),
+    images: mainNpmFiles()
+        .filter((f) => RegExp('.*.+(png|gif|svg)', 'i').test(f))
+        .concat(['images/*']),
     fonts: mainNpmFiles().filter((f) => RegExp('font-awesome/fonts/.*', 'i').test(f)),
     changelog: 'CHANGELOG.md',
     locales: 'locales/*.json',
@@ -215,6 +217,7 @@ gulp.task('watch', function () {
             remember.forget('scripts', event.path);
         }
     });
+    gulp.watch(paths.images, gulp.series('images', 'reload'));
     gulp.watch(paths.changelog, gulp.series('changelog', 'reload'));
     gulp.watch(paths.locales, gulp.series('locales', 'reload'));
     gulp.watch(paths.styles, gulp.series('styles', 'reload'));

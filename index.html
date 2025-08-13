@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
-        <title data-i18n="title">BRouter web client</title>
+        <title>Route Planner | Welcome To My Garden</title>
 
         <!-- inject:css -->
         <link rel="stylesheet" href="dist/brouter-web.css" />
@@ -14,7 +14,7 @@
     </head>
 
     <body class="flexcolumn">
-        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-md navbar-dark">
             <button
                 class="navbar-toggler"
                 type="button"
@@ -26,9 +26,10 @@
             >
                 <span class="fa fa-bars"></span>
             </button>
-            <a class="navbar-brand order-md-last" href="#" data-toggle="modal" data-target="#about"
-                >BRouter-Web <sup class="version">0.18.1</sup></a
-            >
+            <a class="order-md-last" href="#" data-toggle="modal" data-target="#about">
+                <img src="dist/images/routeplanner-logo.png" style="width: 192px" />
+                <!-- BRouter-Web <sup class="version">0.18.1</sup> -->
+            </a>
             <div class="collapse navbar-collapse" id="collapsingNavbar">
                 <div class="navbar-nav">
                     <form class="form-inline" id="profile-alternative-form">
@@ -151,6 +152,17 @@
                     <div
                         class="nav-item"
                         data-i18n="[title]keyboard.generic-shortcut"
+                        data-i18n-options='{ "action": "Show the tutorial", "key": "no" }'
+                        title="Show more information about BRouter-Web"
+                    >
+                        <a class="nav-link" href="#" data-toggle="modal" data-target="#tutorial"
+                            ><span class="fa fa-lg fa-lightbulb-o" aria-hidden="true"></span
+                            ><span data-i18n="navbar.tutorial">Tutorial</span></a
+                        >
+                    </div>
+                    <div
+                        class="nav-item"
+                        data-i18n="[title]keyboard.generic-shortcut"
                         data-i18n-options='{ "action": "$t(about.tooltip)", "key": "H" }'
                         title="Show more information about BRouter-Web"
                     >
@@ -158,6 +170,19 @@
                             ><span class="fa fa-lg fa-info-circle" aria-hidden="true"></span
                             ><span data-i18n="navbar.about">About</span></a
                         >
+                    </div>
+                    <div
+                        class="nav-item"
+                        data-i18n="[title]keyboard.generic-shortcut"
+                        data-i18n-options='{ "action": "Go to Welcome To My Garden", "key": "no" }'
+                        title="Show more information about BRouter-Web"
+                    >
+                        <a class="nav-link" href="https://welcometomygarden.org/explore" rel="noopener">
+                            <button class="navbar-outlink">
+                                <span class="" aria-hidden="true">🏕️</span>
+                                <span data-i18n="navbar.wtmg">Go to WTMG</span>
+                            </button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -373,7 +398,7 @@
                             <a href="https://brouter.de/brouter/segments4/" target="_blank">data files</a>.
                         </p>
                         <p id="aboutLinks" data-i18n="[html]about.details">
-                            <i><a href="{{privacyPolicyUrl}}" target="_blank">Privacy Policy</a></i
+                            <i><a href="#" data-toggle="modal" data-target="#privacypolicy">Privacy Policy</a></i
                             >,
                             <i
                                 ><a href="https://github.com/nrenner/brouter-web#credits-and-licenses" target="_blank"
@@ -393,24 +418,45 @@
                         </p>
                     </div>
                     <div class="modal-footer">
-                        <button
-                            type="button"
-                            class="btn btn-secondary"
-                            data-i18n="keyboard-shortcuts.title"
-                            data-toggle="modal"
-                            data-target="#help"
-                        >
-                            Help/Keyboard shortcuts
+                        <button type="button" class="btn btn-primary" data-i18n="modal.close" data-dismiss="modal">
+                            Close
                         </button>
-                        <button
-                            type="button"
-                            class="btn btn-secondary"
-                            data-i18n="whatsnew.title"
-                            data-toggle="modal"
-                            data-target="#whatsnew"
-                        >
-                            What's new?
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tutorial modal window -->
+        <div
+            class="modal fade"
+            id="tutorial"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="Tutorial window"
+            aria-hidden="true"
+        >
+            <div class="modal-dialog modal-fullscreen-md-down modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" data-i18n="navbar.tutorial">Tutorial</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
                         </button>
+                    </div>
+                    <div class="modal-body">
+                        <iframe
+                            width="100%"
+                            height="315"
+                            style="aspect-ratio: 16/9; height: auto"
+                            src="https://www.youtube-nocookie.com/embed/n515aaRk4MY?si=yuC01nMnJfEIH-KW"
+                            title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen
+                        ></iframe>
+                    </div>
+                    <div class="modal-footer">
                         <button type="button" class="btn btn-primary" data-i18n="modal.close" data-dismiss="modal">
                             Close
                         </button>
@@ -595,6 +641,50 @@
                                 <div class="keyboard-shortcuts-key"><kbd>?</kbd></div>
                             </li>
                         </ul>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-i18n="modal.close" data-dismiss="modal">
+                            Close
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Privacy policy modal window -->
+        <div
+            class="modal fade"
+            id="privacypolicy"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="Privacy policy"
+            aria-hidden="true"
+        >
+            <div class="modal-dialog modal-lg modal-fullscreen-md-down" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" data-i18n="whatsnew.title">Privacy policy</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Visits to this site are recorded in standard HTTP logfiles. This includes among others, IP
+                        adresses, time of access, the requested resources, name and version of the user agent, the
+                        geo-coordinates of the requested routings and the content of uploaded custom routing profiles.
+                        This information is needed to maintain the quality of service. It is stored for 2 weeks and then
+                        deleted. Another 10 days add to this 2 weeks where this information is stored as part the the
+                        regular system backups that are operated by the hosting provider.
+                        <br /><br />
+                        We do not request or process any additional personal data not mentioned above.
+                        <br /><br />
+                        We do not use cookies, nor any external tracking tools.
+                        <br /><br />
+                        The map-tiles for the visible map in brouter-web are not processed by our server. They are
+                        requested directly by your browser from the respective providers. These map-tile requests also
+                        carry IP adresses and the geo-locations of the requested tiles, so please consult these
+                        providers on data privacy issues if in doubt.
+                        <br />
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-primary" data-i18n="modal.close" data-dismiss="modal">

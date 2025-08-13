@@ -9,7 +9,7 @@
     "data": "資料:",
     "data-description": "這資料來<a href=\"https://www.openstreetmap.org\" target=\"_blank\">開放資料</a>，通常每天更新，請見<a href=\"https://brouter.de/brouter/segments4/\" target=\"_blank\">資料檔案</a>的日期。",
     "description": "BRouter 導航引擎線上版。有關離線版 Android 應用程式及更多資訊，請見 <a href=\"https://brouter.de/\" target=\"_blank\">brouter.de</a>。",
-    "details": "用戸端上的<i><a href=\"{{privacyPolicyUrl}}\" target=\"_blank\">隱私政策</a></i>、\n<i><a href=\"https://github.com/nrenner/brouter-web#credits-and-licenses\" target=\"_blank\">開發人員名單</a></i>、\n<i><a href=\"https://github.com/nrenner/brouter-web/blob/master/CHANGELOG.md\" target=\"_blank\">更新日誌</a></i> 及\n<i><a href=\"https://github.com/nrenner/brouter-web#readme\" target=\"_blank\">更多資訊</a></i> ",
+    "details": "用戸端上的<i><a href=\"#\" data-toggle=\"modal\" data-target=\"#privacypolicy\">隱私政策</a></i>、\n<i><a href=\"https://github.com/nrenner/brouter-web#credits-and-licenses\" target=\"_blank\">開發人員名單</a></i>、\n<i><a href=\"https://github.com/nrenner/brouter-web/blob/master/CHANGELOG.md\" target=\"_blank\">更新日誌</a></i> 及\n<i><a href=\"https://github.com/nrenner/brouter-web#readme\" target=\"_blank\">更多資訊</a></i> ",
     "support": "一般討論/提問及技術支援",
     "title": "關於",
     "tooltip": "顯示關於 BRouter-Web 更多的資訊"

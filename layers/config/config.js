@@ -3,21 +3,26 @@ BR.confLayers = {};
 BR.confLayers.defaultBaseLayers = [
     'standard',
     'OpenTopoMap',
-    'Stamen.Terrain',
-    'Esri.WorldImagery'
+    // 'Stamen.Terrain',
+    'Esri.WorldImagery',
+    'cyclosm',
+    'opencylemap',
+    'transport'
+            
 ];
 
 // worldwide monolingual layers to add as default when browser language matches
 BR.confLayers.languageDefaultLayers = [
-    'osm-mapnik-german_style',
-    'cyclosm',
-    '1021' // sputnik.ru
+    // 'osm-mapnik-german_style',
+    // 'cyclosm',
+    // '1021' // sputnik.ru
 ];
 
 BR.confLayers.defaultOverlays =  [
-    'terrarium-hillshading',
     'Waymarked_Trails-Cycling',
-    'Waymarked_Trails-Hiking'
+    'Waymarked_Trails-Hiking',
+    'terrarium-hillshading',
+    'openrailwaymap',
 ];
 
 BR.confLayers.legacyNameToIdMap = {

@@ -4,7 +4,7 @@ BR.confLayers.tree = {
             'standard',
             'cyclosm',
             'OpenTopoMap',
-            'Stamen.Terrain',
+            // 'Stamen.Terrain', // TODO: get key?
             'Esri.WorldImagery',
             'wikimedia-map',
             'HDM_HOT',

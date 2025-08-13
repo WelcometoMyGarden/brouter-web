@@ -9,7 +9,7 @@
     "data": "داده:",
     "data-description": "این بر اساس <a href=\"https://www.openstreetmap.org\" target=\"_blank\">اوپن‌استریت‌مپ </a>است. معمولاً روزانه به روز می شود، تاریخ <a href=\"https://brouter.de/brouter/segments4/\" target=\"_blank\">فایل های داده</a> را ببینید.",
     "description": "سرویس آنلاین موتور مسیریابی BRouter. برای برنامه آفلاین اندروید و اطلاعات بیشتر به <a href=\"https://brouter.de/\" target=\"_blank\">brouter.de</a> مراجعه کنید",
-    "details": "<i><a href=\"{{privacyPolicyUrl}}\" target=\"_blank\">سیاست حفظ حریم خصوصی</a></i>, \n<i><a href=\"https://github.com/nrenner/brouter-web#credits-and-licenses\" target=\"_blank\">اعتبار</a></i>,\n<i><a href=\"https://github.com/nrenner/brouter-web/blob/master/CHANGELOG.md\" target=\"_blank\">تغییرات</a></i> و\n<i><a href=\"https://github.com/nrenner/brouter-web#readme\" target=\"_blank\">اطلاعات بیشتر</a></i> درمورد مشتری.",
+    "details": "<i><a href=\"#\" data-toggle=\"modal\" data-target=\"#privacypolicy\">سیاست حفظ حریم خصوصی</a></i>, \n<i><a href=\"https://github.com/nrenner/brouter-web#credits-and-licenses\" target=\"_blank\">اعتبار</a></i>,\n<i><a href=\"https://github.com/nrenner/brouter-web/blob/master/CHANGELOG.md\" target=\"_blank\">تغییرات</a></i> و\n<i><a href=\"https://github.com/nrenner/brouter-web#readme\" target=\"_blank\">اطلاعات بیشتر</a></i> درمورد مشتری.",
     "support": "بحثها/سوالات عمومی، پشتیبانی",
     "title": "درباره",
     "tooltip": "نمایش اطلاعات بیشتر در مورد BRouter-Web"
