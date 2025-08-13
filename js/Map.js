@@ -49,9 +49,7 @@ BR.Map = {
                 ' &middot; <a href="" data-toggle="modal" data-target="#credits">' +
                 i18next.t('map.copyright') +
                 '</a>' +
-                ' &middot; <a target="_blank" href="' +
-                privacyPolicyUrl +
-                '">' +
+                ' &middot; <a target="_blank" href="#" data-toggle="modal" data-target="#privacypolicy">' +
                 i18next.t('map.privacy') +
                 '</a>'
         );
