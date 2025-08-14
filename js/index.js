@@ -567,9 +567,9 @@
             function (err, t) {
                 jqueryI18next.init(i18next, $, { useOptionsAttr: true });
                 $('html').localize();
-                $('#aboutLinks').localize({
-                    privacyPolicyUrl: BR.conf.privacyPolicyUrl || 'https://brouter.de/privacypolicy.html',
-                });
+                // $('#aboutLinks').localize({
+                //     privacyPolicyUrl: BR.conf.privacyPolicyUrl || 'https://brouter.de/privacypolicy.html',
+                // });
 
                 mapContext = BR.Map.initMap();
                 verifyTouchStyle(mapContext);

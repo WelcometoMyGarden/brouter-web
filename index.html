@@ -413,75 +413,51 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <p data-i18n="[html]about.description">
-                            Online service of the BRouter routing engine. For the offline Android app and more
-                            information see
-                            <a href="https://brouter.de/" target="_blank">brouter.de</a>.
-                        </p>
-                        <p><i data-i18n="about.contact">Contact:</i></p>
-
-                        <div id="about-contact-language" data-i18n="about.contact-language">
-                            Preferred language is English, as we have both international contributors and users.
+                        <div data-i18n="[html]about.description">
+                            <p>
+                                Welcome to our favourite online route planner for cycling and hiking! It’s based on the
+                                open routing engine
+                                <a href="https://github.com/abrensch/brouter" target="_blank">BRouter</a> by Arndt
+                                Brenschede and
+                                <a href="https://github.com/nrenner/brouter-web" target="_blank">BRouter-Web</a> by
+                                Norbert Renner.
+                            </p>
+                            <p>
+                                With <a href="https://welcometomygarden.org/">Welcome To My Garden</a> (WTMG), we’re on
+                                a mission to make slow travel more accessible. We set up this tool so that more slow
+                                travellers can discover it and we can adapt it step by step to the needs of our
+                                community. We hope it will help you too!
+                            </p>
+                            <p>
+                                💬 Questions or suggestions? Email us at support@welcometomygarden.org.<br />💚 Want to
+                                support our mission and WTMG?
+                                <a href="https://welcometomygarden.org/about-membership">Become a member</a>.
+                            </p>
                         </div>
-
+                        <p><strong data-i18n="about.credits.title">Credits</strong></p>
                         <ul>
                             <li>
-                                <a href="https://groups.google.com/group/osm-android-bikerouting" target="_blank"
-                                    ><span data-i18n="about.support">General discussions/questions, support</span></a
+                                <span data-i18n="about.credits.routing-engine">Routing engine:</span>
+                                <a href="https://github.com/abrensch/brouter" target="_blank">BRouter</a>
+                            </li>
+                            <li>
+                                <span data-i18n="about.credits.web-client">Web client:</span>
+                                <a href="https://github.com/nrenner/brouter-web" target="_blank">BRouter-Web</a>
+                            </li>
+                            <li>
+                                <span data-i18n="about.credits.map-data">Map data:©️</span>
+                                <a href="https://www.openstreetmap.org/copyright" target="_blank"
+                                    >OpenStreetMap contributors</a
                                 >
                             </li>
                             <li>
-                                <a href="https://app.element.io/#/room/#_oftc_#brouter:matrix.org" target="_blank"
-                                    ><span data-i18n="about.chat">Chat with users and developers</span></a
-                                >
-                            </li>
-                            <li>
-                                <span data-i18n="about.bug-reports">Bug reports and feature requests:</span>
-                                <ul>
-                                    <li>
-                                        <a href="https://github.com/abrensch/brouter/issues" target="_blank">
-                                            <span data-i18n="about.bug-reports-back"
-                                                >server/backend, routing engine, Android app, profiles, brouter.de
-                                                site</span
-                                            >
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://github.com/nrenner/brouter-web/issues" target="_blank">
-                                            <span data-i18n="about.bug-reports-front">web client/frontend.</span>
-                                        </a>
-                                    </li>
-                                </ul>
+                                <span data-i18n="about.credits.waymarked-trails">Fiets- en wandelroutes: ©</span>
+                                <a href="https://waymarkedtrails.org/" target="_blank">Waymarked Trails</a>
                             </li>
                         </ul>
-                        <p>
-                            <i data-i18n="about.data">Data:</i>
-                        </p>
-
-                        <p data-i18n="[html]about.data-description">
-                            This is based on
-                            <a href="https://www.openstreetmap.org" target="_blank">OpenStreetMap</a>. It is usually
-                            updated daily, see dates of
-                            <a href="https://brouter.de/brouter/segments4/" target="_blank">data files</a>.
-                        </p>
-                        <p id="aboutLinks" data-i18n="[html]about.details">
-                            <i><a href="#" data-toggle="modal" data-target="#privacypolicy">Privacy Policy</a></i
-                            >,
-                            <i
-                                ><a href="https://github.com/nrenner/brouter-web#credits-and-licenses" target="_blank"
-                                    >Credits</a
-                                ></i
-                            >,
-                            <i
-                                ><a
-                                    href="https://github.com/nrenner/brouter-web/blob/master/CHANGELOG.md"
-                                    target="_blank"
-                                    >Changelog</a
-                                ></i
-                            >
-                            and
-                            <i><a href="https://github.com/nrenner/brouter-web#readme" target="_blank">more info</a></i>
-                            on the client.
+                        <p data-i18n="[html]about.safety">
+                            For your safety, always follow the traffic code and use your own judgment.<br />WTMG can’t
+                            be held responsible for trips planned with this tool.
                         </p>
                     </div>
                     <div class="modal-footer">
@@ -911,7 +887,7 @@
                         <button type="button" class="btn btn-secondary" data-i18n="modal.close" data-dismiss="modal">
                             Close
                         </button>
-                        <button type="button" class="btn btn-secondary" id="serverExport">
+                        <!-- <button type="button" class="btn btn-secondary" id="serverExport">
                             <span>
                                 <i class="fa fa-cloud-download"></i>
                                 <i
@@ -921,7 +897,7 @@
                                     style="font-size: 10px; position: absolute; margin-top: -3px; margin-left: -1px"
                                 ></i>
                             </span>
-                        </button>
+                        </button> -->
                         <button type="submit" class="btn btn-primary" form="exportForm" id="submitExport">
                             <span class="fa fa-download"></span>
                             <span data-i18n="export.title">Export route</span>

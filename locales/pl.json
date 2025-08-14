@@ -8,10 +8,10 @@
     "contact-language": "Preferowanym językiem jest angielski, ponieważ mamy zarówno międzynarodowych edytorów, jak i użytkowników.",
     "data": "Dane:",
     "data-description": "Oparta jest na <a href=\"https://www.openstreetmap.org\" target=\"_blank\">OpenStreetMap</a>. Zazwyczaj aktualizowana jest codziennie, zobacz daty <a href=\"https://brouter.de/brouter/segments4/\" target=\"_blank\">plików z danymi</a>.",
-    "description": "Dostęp online do silnika wyznaczania tras BRouter. Aplikację offline na Androida i więcej informacji znajdziesz na <a href=\"https://brouter.de/\" target=\"_blank\">brouter.de</a>",
+    "description": "",
     "details": "<i><a href=\"#\" data-toggle=\"modal\" data-target=\"#privacypolicy\">Polityka prywatności</a></i>, \n<i><a href=\"https://github.com/nrenner/brouter-web#credits-and-licenses\" target=\"_blank\">Autorzy</a></i>,\n<i><a href=\"https://github.com/nrenner/brouter-web/blob/master/CHANGELOG.md\" target=\"_blank\">Histroia zmian</a></i> i\n<i><a href=\"https://github.com/nrenner/brouter-web#readme\" target=\"_blank\">więcej informacji</a></i> na temat klienta.",
     "support": "Ogólna dyskusja/pytania, wsparcie",
-    "title": "Informacje",
+    "title": "",
     "tooltip": "Pokaż więcej informacji o BRouter-Web"
   },
   "credits": {

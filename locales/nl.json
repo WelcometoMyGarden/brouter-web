@@ -8,11 +8,15 @@
     "contact-language": "Bij voorkeur in Engels omdat we internationale bijdragers en gebruikers hebben",
     "data": "Gegevens:",
     "data-description": "Dit is gebaseerd op <a href=\"https://www.openstreetmap.org\" target=\"_blank\">OpenStreetMap</a>. Het wordt normaal gesproken dagelijks geüpdated, zie data van <a href=\"https://brouter.de/brouter/segments4/\" target=\"_blank\">gegevensbestanden</a>.",
-    "description": "Online dienst van de BRouter routebepaling. Voor de offline Android app en meer informatie, zie <a href=\"https://brouter.de/\" target=\"_blank\">brouter.de</a>",
+    "description": "<p>\nWelkom bij onze favoriete online routeplanner voor fietsen en wandelen! Dit is gebaseerd op de open routing engine \n  <a href=\"https://github.com/abrensch/brouter\" target=\"_blank\">BRouter</a> van Arndt\n  Brenschede en\n  <a href=\"https://github.com/nrenner/brouter-web\" target=\"_blank\">BRouter-Web</a> van\n  Norbert Renner.\n</p>\n<p>\n  Met <a href=\"https://welcometomygarden.org/\" target=\"_blank\">Welcome To My Garden</a> (WTMG) hebben we als missie om slow travel toegankelijker te maken. We hebben deze tool opgezet zodat meer slow travellers hem kunnen ontdekken, en zodat we hem stap voor stap kunnen aanpassen aan de noden van onze community. We hopen dat het jou ook helpt!\n</p>\n<p>\n  💬 Vragen of suggesties? Mail ons op support@welcometomygarden.org.<br />💚 Onze missie en WTMG steunen?\n  <a href=\"https://welcometomygarden.org/about-membership\" target=\"_blank\">Word lid</a>.\n</p>",
     "details": "<i><a href=\"#\" data-toggle=\"modal\" data-target=\"#privacypolicy\">Privacybeleid</a></i>, \n<i><a href=\"https://github.com/nrenner/brouter-web#credits-and-licenses\" target=\"_blank\">Dank aan</a></i>,\n<i><a href=\"https://github.com/nrenner/brouter-web/blob/master/CHANGELOG.md\" target=\"_blank\">Wijzigingen</a></i> en\n<i><a href=\"https://github.com/nrenner/brouter-web#readme\" target=\"_blank\">meer informatie</a></i> over de website.",
     "support": "Algemene discussies/vragen, ondersteuning",
-    "title": "Over",
-    "tooltip": "Toon meer informatie over BRouter-Web"
+    "title": "Over deze routeplanner",
+    "tooltip": "Toon meer informatie over BRouter-Web",
+    "credits": {
+      "waymarked-trails": "Fiets- en wandelroutes: ©"
+    },
+    "safety": "Volg voor je veiligheid altijd de verkeersregels en gebruik je gezond verstand. WTMG kan niet aansprakelijk worden gesteld voor geplande routes met deze tool."
   },
   "credits": {
     "boundaries": "Administratieve Grenzen: <a href=\"https://osm-boundaries.com\" target=\"_blank\">OSM-Grenzen</a>, <a href=\"https://overpass-api.de/\" class=\"overpass-url\" target=\"_blank\">Overpass API</a>",

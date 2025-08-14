@@ -27,7 +27,7 @@ BR.Export = L.Class.extend({
 
         this.exportButton.on('click', L.bind(this._generateTrackname, this));
         L.DomUtil.get('submitExport').onclick = L.bind(this._export, this);
-        L.DomUtil.get('serverExport').onclick = L.bind(this._exportServer, this);
+        // L.DomUtil.get('serverExport').onclick = L.bind(this._exportServer, this);
 
         L.DomEvent.addListener(document, 'keydown', this._keydownListener, this);
 
@@ -60,7 +60,7 @@ BR.Export = L.Class.extend({
         if (isFit) {
             title = '[Warning: FIT not supported] ' + title;
         }
-        document.getElementById('serverExport').title = title;
+        // document.getElementById('serverExport').title = title;
     },
 
     _turnInstructionInfo() {

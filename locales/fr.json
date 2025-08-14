@@ -8,11 +8,20 @@
     "contact-language": "L'anglais est à privilégier pour les échanges, car les développeurs et utilisateurs viennent du monde entier.",
     "data": "Données :",
     "data-description": "Les données reposent sur <a href=\"https://www.openstreetmap.org\" target=\"_blank\">OpenStreetMap</a>. La mise à jour est généralement quotidienne, voir <a href=\"https://brouter.de/brouter/segments4/\" target=\"_blank\">les fichiers de données</a>. ",
-    "description": "Service web pour le moteur de routage BRouter. Pour l'appli Android et de plus amples informations, voir <a href=\"https://brouter.de/\" target=\"_blank\">brouter.de</a>.",
+    "description": "<p>\n  Bienvenue sur notre site préféré pour planifier nos itinéraires vélo et rando ! Il est basé sur le moteur de calcul d’itinéraires libre\n  <a href=\"https://github.com/abrensch/brouter\" target=\"_blank\">BRouter</a> d’Arndt Brenschede et sur\n  <a href=\"https://github.com/nrenner/brouter-web\" target=\"_blank\">BRouter-Web</a> de\n  Norbert Renner.\n</p>\n<p>\n  Avec <a href=\"https://welcometomygarden.org/\" target=\"_blank\">Welcome To My Garden</a> (WTMG), notre mission est de rendre le voyage lent plus accessible. Nous avons mis en place cet outil afin que davantage de voyageur·euses lent·es puissent le découvrir, et pour que nous puissions l’adapter petit à petit aux besoins de notre communauté. Nous espérons qu’il vous sera utile !\n</p>\n<p>\n  💬 Des questions ou des suggestions ? Écrivez-nous à support@welcometomygarden.org.<br />💚 Vous souhaitez soutenir notre mission et WTMG ? \n  <a href=\"https://welcometomygarden.org/about-membership\" target=\"_blank\">Devenez membre</a>.\n</p>",
     "details": "<i><a href=\"#\" data-toggle=\"modal\" data-target=\"#privacypolicy\">Respect de la vie privée</a></i>, \n<i><a href=\"https://github.com/nrenner/brouter-web#credits-and-licenses\" target=\"_blank\">Crédits</a></i>,\n<i><a href=\"https://github.com/nrenner/brouter-web/blob/master/CHANGELOG.md\" target=\"_blank\">Changements</a></i> et\n<i><a href=\"https://github.com/nrenner/brouter-web#readme\" target=\"_blank\">plus d'infos</a></i> sur le client web.",
     "support": "Discussions et questions générales, support ;",
-    "title": "À propos",
-    "tooltip": "Afficher plus d'informations à propos de BRouter-Web"
+    "title": "À propos de ce route planner",
+    "tooltip": "Afficher plus d'informations à propos de BRouter-Web",
+    "credits": {
+      "title": "Crédits",
+      "web-client": "Client web :",
+      "routing-engine": "Moteur de calcul d’itinéraires :",
+      "map-data": "Données cartographiques : ©️",
+      "osm-contributors": "contributeurs OpenStreetMap",
+      "waymarked-trails": "Itinéraires vélo et randonnée : ©"
+    },
+    "safety": "Pour votre sécurité, respectez toujours le code de la route et utilisez votre propre jugement.<br/>\nWTMG ne peut pas être tenu responsable des trajets planifiés avec cet outil."
   },
   "credits": {
     "boundaries": "limites administratives: <a href=\"https://osm-boundaries.com\" target=\"_blank\">OSM-Boundaries</a>, <a href=\"https://overpass-api.de/\" class=\"overpass-url\" target=\"_blank\">Overpass API</a>",

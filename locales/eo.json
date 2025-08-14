@@ -8,10 +8,10 @@
     "contact-language": "Preferita lingvo estas la angla, ĉar ni havas ambaŭ internaciajn kontribuantojn kaj uzantojn.",
     "data": "Datumoj:",
     "data-description": "This is based on <a href=\"https://www.openstreetmap.org\" target=\"_blank\">OpenStreetMap</a>. It is usually updated daily, see dates of <a href=\"https://brouter.de/brouter/segments4/\" target=\"_blank\">data files</a>.",
-    "description": "Online service of the BRouter routing engine. For the offline Android app and more information see <a href=\"https://brouter.de/\" target=\"_blank\">brouter.de</a>",
+    "description": "",
     "details": "<i><a href=\"#\" data-toggle=\"modal\" data-target=\"#privacypolicy\">Privacy Policy</a></i>, \n<i><a href=\"https://github.com/nrenner/brouter-web#credits-and-licenses\" target=\"_blank\">Credits</a></i>,\n<i><a href=\"https://github.com/nrenner/brouter-web/blob/master/CHANGELOG.md\" target=\"_blank\">Changelog</a></i> and\n<i><a href=\"https://github.com/nrenner/brouter-web#readme\" target=\"_blank\">more info</a></i> on the client.",
     "support": "General discussions/questions, support",
-    "title": "Pri",
+    "title": "",
     "tooltip": "Show more information about BRouter-Web"
   },
   "credits": {

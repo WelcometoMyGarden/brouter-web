@@ -8,10 +8,10 @@
     "contact-language": "La lingua preferita è l'inglese, dato che abbiamo sia utilizzatori che contributori internazionali.",
     "data": "Dati:",
     "data-description": "Basato su <a href=\"https://www.openstreetmap.org\" target=\"_blank\">OpenStreetMap</a>. Di solito viene aggiornato quotidianamente, leggi la data dei <a href=\"https://brouter.de/brouter/segments4/\" target=\"_blank\">file dati</a>.",
-    "description": "Servizio online del motore di routing BRouter. Per l'app Android offline ed altri informazioni vedere <a href=\"https://brouter.de/\" target=\"_blank\">brouter.de</a>",
+    "description": "",
     "details": "<i><a href=\"#\" data-toggle=\"modal\" data-target=\"#privacypolicy\">Informativa sulla privacy</a></i>, \n<i><a href=\"https://github.com/nrenner/brouter-web#credits-and-licenses\" target=\"_blank\">Ringraziamenti</a></i>,\n<i><a href=\"https://github.com/nrenner/brouter-web/blob/master/CHANGELOG.md\" target=\"_blank\">Changelog</a></i> ed\n<i><a href=\"https://github.com/nrenner/brouter-web#readme\" target=\"_blank\">altre info</a></i> sul client.",
     "support": "Discussioni/domande generali, assistenza",
-    "title": "Informazioni",
+    "title": "",
     "tooltip": "Mostra più informazioni su BRouter-Web"
   },
   "credits": {

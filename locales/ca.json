@@ -8,10 +8,10 @@
     "contact-language": "L'idioma preferit és l'anglès, ja que tenim tant contribuïdors com usuaris d'arreu del món.",
     "data": "Dades:",
     "data-description": "Això està basat en <a href=\"https://www.openstreetmap.org\" target=\"_blank\">OpenStreetMap</a>. Normalment s'actualitza diàriament, veure les dates a <a href=\"https://brouter.de/brouter/segments4/\" target=\"_blank\">fitxers de dades</a>.",
-    "description": "Serveis en línia del motor d'itineraris BRouter. Per l'aplicació Android fora de línia i més informació, veure <a href=\"https://brouter.de/\" target=\"_blank\">brouter.de</a>",
+    "description": "",
     "details": "<i><a href=\"#\" data-toggle=\"modal\" data-target=\"#privacypolicy\">Política de privacitat</a></i>, \n<i><a href=\"https://github.com/nrenner/brouter-web#credits-and-licenses\" target=\"_blank\">Crèdits</a></i>,\n<i><a href=\"https://github.com/nrenner/brouter-web/blob/master/CHANGELOG.md\" target=\"_blank\">Registre de canvis</a></i> i\n<i><a href=\"https://github.com/nrenner/brouter-web#readme\" target=\"_blank\">més informació</a></i> sobre el client.",
     "support": "Debats generals/preguntes, suport",
-    "title": "Quant a",
+    "title": "",
     "tooltip": "Mostra més informació sobre BRouter-Web"
   },
   "credits": {
