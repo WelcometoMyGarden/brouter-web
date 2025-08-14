@@ -7,6 +7,11 @@
 (function () {
     var mapContext;
 
+    var initialHash = window.location.hash;
+    if (initialHash === '#tutorial') {
+        $('#tutorial').modal('show');
+    }
+
     function verifyTouchStyle(mapContext) {
         // revert touch style (large icons) when touch screen detection is available and negative
         // see https://github.com/nrenner/brouter-web/issues/69

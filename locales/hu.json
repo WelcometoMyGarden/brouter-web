@@ -127,7 +127,7 @@
     "hiking": "Túrázás",
     "layer": {
       "bing": "Bing Aerial",
-      "cycle": "OpenCycleMap (Thunderfores)",
+      "cycle": "OpenCycleMap",
       "cycling": "Kerékpározás (Waymarked Trails)",
       "digitalglobe": "DigitalGlobe Recent Imagery",
       "esri": "Esri World Imagery",
