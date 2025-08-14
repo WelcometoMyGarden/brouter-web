@@ -93,7 +93,7 @@
             >
                 <span class="fa fa-bars"></span>
             </button>
-            <a class="order-md-last" href="#" data-toggle="modal" data-target="#about">
+            <a class="order-md-last plausible-event-name=about" href="#" data-toggle="modal" data-target="#about">
                 <img src="dist/images/routeplanner-logo.svg" style="width: 192px" />
                 <!-- BRouter-Web <sup class="version">0.18.1</sup> -->
             </a>
@@ -139,7 +139,7 @@
                     </div>
                     <div class="nav-item">
                         <a
-                            class="nav-link"
+                            class="nav-link plausible-event-name=share"
                             data-toggle="modal"
                             data-target="#share-dialog"
                             id="shareButton"
@@ -191,13 +191,17 @@
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarLoadDropdown">
                             <div id="navbarLoadTracksContainer">
-                                <a class="dropdown-item" data-i18n="navbar.load.tracks" href="#" id="navbarLoadTracks"
+                                <a
+                                    class="dropdown-item plausible-event-name=upload-display-nav"
+                                    data-i18n="navbar.load.tracks"
+                                    href="#"
+                                    id="navbarLoadTracks"
                                     >Tracks</a
                                 >
                             </div>
                             <div id="navbarLoadEditTracksContainer">
                                 <a
-                                    class="dropdown-item"
+                                    class="dropdown-item plausible-event-name=upload-edit-nav"
                                     data-i18n="trackasroute.title"
                                     data-toggle="modal"
                                     data-target="#loadedittrack"
@@ -222,7 +226,11 @@
                         data-i18n-options='{ "action": "Show the tutorial", "key": "no" }'
                         title="Show more information about BRouter-Web"
                     >
-                        <a class="nav-link" href="#" data-toggle="modal" data-target="#tutorial"
+                        <a
+                            class="nav-link plausible-event-name=tutorial"
+                            href="#"
+                            data-toggle="modal"
+                            data-target="#tutorial"
                             ><span class="fa fa-lg fa-lightbulb-o" aria-hidden="true"></span
                             ><span data-i18n="navbar.tutorial">Tutorial</span></a
                         >
@@ -233,7 +241,7 @@
                         data-i18n-options='{ "action": "$t(about.tooltip)", "key": "H" }'
                         title="Show more information about BRouter-Web"
                     >
-                        <a class="nav-link" href="#" data-toggle="modal" data-target="#about"
+                        <a class="nav-link plausible-event-name=about" href="#" data-toggle="modal" data-target="#about"
                             ><span class="fa fa-lg fa-info-circle" aria-hidden="true"></span
                             ><span data-i18n="navbar.about">About</span></a
                         >
@@ -780,7 +788,12 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <h4 class="modal-title" data-i18n="export.title">Export route</h4>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <button
+                            type="button"
+                            class="close plausible-event-name=export"
+                            data-dismiss="modal"
+                            aria-label="Close"
+                        >
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
