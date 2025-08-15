@@ -176,7 +176,7 @@
     "zoomOutTitle": "Zoom uit"
   },
   "modal": {
-    "close": "Afsluiten",
+    "close": "Sluiten",
     "or": ""
   },
   "navbar": {
@@ -218,6 +218,7 @@
       "vm-forum-velomobil-schnell": "Ligfiets (snel)"
     },
     "profile-tooltip": "\n({{key}} toets om te schakelen)",
+    "share": "Deel",
     "wtmg": "Ga naar WTMG"
   },
   "searchfav": {
