@@ -63,6 +63,7 @@ L.Control.Button = L.Control.extend({
                 // For now!
                 // showOnce: true,
                 // doNotShowAfterSubmit: true,
+                layout: 'modal',
                 onClose: () => {
                     if (!npsSurveySubmitted) {
                         plausible('close-feedback');
