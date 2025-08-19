@@ -334,5 +334,6 @@
   "whatsnew": {
     "new-version": "Une nouvelle version est disponible depuis votre dernière visite. Cliquez <a href='.' data-toggle='modal' data-target='#whatsnew'>ici</a> pour voir les nouveautés !",
     "title": "Nouveautés"
-  }
+  },
+  "feedback-formid": "nr4dzo"
 }

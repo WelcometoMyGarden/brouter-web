@@ -401,6 +401,17 @@
         buttons.push(deletePointButton, deleteRouteButton);
 
         L.easyBar(buttons).addTo(map);
+
+        L.control
+            .button({
+                position: 'bottomright',
+                icon: 'fa fa-bullhorn', // any FA4 icon class
+                text: 'Feedback',
+                title: 'Share your feedback',
+                className: 'btn-feedback plausible-event-name=show-feedback',
+            })
+            .addTo(map);
+
         nogos.preventRoutePointOnCreate(routing);
 
         if (BR.keys.strava) {

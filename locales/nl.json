@@ -329,5 +329,6 @@
   "whatsnew": {
     "new-version": "Een nieuwe versie is gepubliceerd sinds uw laatste bezoek. Klik <a href='.' data-toggle='modal' data-target='#whatsnew'>hier</a> om te zien wat er is veranderd!",
     "title": "Wat is er veranderd?"
-  }
+  },
+  "feedback-formid": "nPxXV1"
 }

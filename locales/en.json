@@ -452,5 +452,6 @@
   "whatsnew": {
     "new-version": "A new version was released since your last visit. Click <a href='.' data-toggle='modal' data-target='#whatsnew'>here</a> to see what's new!",
     "title": "What's new?"
-  }
+  },
+  "feedback-formid": "w2WJDj"
 }
