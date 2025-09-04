@@ -132,11 +132,11 @@
     "layer": {
       "bing": "Bing Aerial",
       "cycle": "OpenCycleMap",
-      "cycling": "Cycling (Waymarked Trails)",
+      "cycling": "Toon fietsroutes",
       "digitalglobe": "DigitalGlobe Recent Imagery",
       "esri": "Esri World Imagery",
       "hikebike-hillshading": "Hillshading (Hike & Bike Map)",
-      "hiking": "Hiking (Waymarked Trails)",
+      "hiking": "Toon wandelroutes",
       "hillshading": "Bergschaduw",
       "osm": "OpenStreetMap",
       "osmde": "OpenStreetMap.de",
@@ -288,7 +288,13 @@
         "type_overpass_query": "Overpass Aanvraag"
       },
       "title": "Lagen",
-      "tooltip": "Selecteer lagen"
+      "tooltip": "Selecteer lagen",
+      "wtmg-radius-slider": "Toon tuinen langs route",
+      "saved-gardens": "Toon bewaarde tuinen",
+      "wtmg-gardens": "WTMG-tuinen",
+      "hiking-cycling-routes": "Fiets- en wandelroutes",
+      "train-layer": "Toon treinnetwerk",
+      "rail-network": "Spoornetwerk"
     },
     "profile": {
       "apply": "Pas toe",
@@ -330,5 +336,8 @@
     "new-version": "Een nieuwe versie is gepubliceerd sinds uw laatste bezoek. Klik <a href='.' data-toggle='modal' data-target='#whatsnew'>hier</a> om te zien wat er is veranderd!",
     "title": "Wat is er veranderd?"
   },
-  "feedback-formid": "nPxXV1"
+  "feedback-formid": "nPxXV1",
+  "siderbar": {
+    "layers": {}
+  }
 }

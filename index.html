@@ -1399,7 +1399,7 @@
                             ><i class="fa fa-map-signs"></i
                         ></a>
                     </li>
-                    <li>
+                    <li hidden id="tab_profile_toggle_button">
                         <a
                             href="#tab_profile"
                             role="tab"
@@ -1413,7 +1413,7 @@
                             ><i class="fa fa-wrench"></i
                         ></a>
                     </li>
-                    <li>
+                    <li hidden>
                         <a
                             href="#tab_data"
                             role="tab"
@@ -1427,7 +1427,7 @@
                             ><i class="fa fa-table"></i
                         ></a>
                     </li>
-                    <li>
+                    <li hidden>
                         <a
                             href="#tab_analysis"
                             role="tab"
@@ -1462,12 +1462,50 @@
                                     ><i class="fa fa-expand"></i></span
                                 ><span data-i18n="sidebar.layers.title">Layers</span>
                             </h1>
-                            <div id="layers-control-wrapper"></div>
-                            <div id="leaflet-control-layers-overlays-opacity-slider">
-                                <div class="leaflet-control-layers-separator"></div>
+                            <h2 data-i18n="sidebar.layers.wtmg-gardens">WTMG gardens</h2>
+                            <div id="leaflet-control-layers-overlays-opacity-slider" hidden>
                                 <label data-i18n="sidebar.layers.overlay-opacity">Overlay transparency</label>
                             </div>
-                            <div class="leaflet-control-layers-separator"></div>
+                            <div id="leaflet-control-layers-overlays-wtmg-radius-slider">
+                                <input
+                                    class=""
+                                    id="wtmg-radius-control"
+                                    type="checkbox"
+                                    checked
+                                    name="wtmg-radius-control"
+                                />
+                                <label for="wtmg-radius-control">
+                                    <span data-i18n="sidebar.layers.wtmg-radius-slider"
+                                        >Show gardens along route</span
+                                    ></label
+                                >
+                                <div class="wtmg-radius-slider-refinement">
+                                    <div>
+                                        <input
+                                            type="number"
+                                            min="0"
+                                            max="20"
+                                            id="wtmg-radius-val"
+                                            style="width: 4rem; margin: 0rem 0 0.1rem 0.7rem; font-weight: bold"
+                                        />
+                                        km
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="leaflet-control-layers-saved-gardens"></div>
+                            <h2 data-i18n="sidebar.layers.hiking-cycling-routes">Hiking & cycling routes</h2>
+                            <div class="leaflet-control-layers-overlays-wtmg"></div>
+                            <h2 data-i18n="sidebar.layers.rail-network">Railway network</h2>
+                            <div class="leaflet-control-layers-overlays-rail">
+                                <label
+                                    ><div>
+                                        <input type="checkbox" class="leaflet-control-layers-selector" />
+                                        <span data-i18n="sidebar.layers.train-layer"> Show train network</span>
+                                    </div></label
+                                >
+                            </div>
+                            <!-- Leaflet will insert its layers and overlay controls in this div -->
+                            <div id="layers-control-wrapper" style="display: none"></div>
                             <div id="layers-button-group">
                                 <div hidden id="tree-button-group">
                                     <button
@@ -1491,7 +1529,7 @@
                                 </div>
                                 <!-- empty dummy to keep following buttons right-aligned when previous hidden -->
                                 <div></div>
-                                <div>
+                                <!-- <div>
                                     <button
                                         type="button"
                                         id="optional_layers_button"
@@ -1512,7 +1550,7 @@
                                         <span class="fa fa-plus-square"></span>
                                         <span data-i18n="sidebar.layers.custom-layers">Custom layers</span>
                                     </button>
-                                </div>
+                                </div> -->
                             </div>
                             <div hidden id="optional-layers">
                                 <div class="help-block" data-i18n="sidebar.layers.optional"></div>

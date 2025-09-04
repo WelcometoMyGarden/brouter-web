@@ -7,6 +7,20 @@
 (function () {
     var mapContext;
 
+    const wtmgOrigin = BR.conf.wtmgHost;
+
+    window.parent.postMessage('ready', wtmgOrigin);
+    window.addEventListener(
+        'message',
+        (event) => {
+            console.log('brouter: new event!', event);
+            if (event.origin !== wtmgOrigin) return;
+            window.wtmg = event.data;
+            mapContext.map.fire('wtmg:data', event.data);
+        },
+        false
+    );
+
     var initialHash = window.location.hash;
     if (initialHash === '#tutorial') {
         $('#tutorial').modal('show');
@@ -51,7 +65,7 @@
 
         search = new BR.Search();
         map.addControl(search);
-        $('#map .leaflet-control-geocoder > button')[0].title = i18next.t('keyboard.generic-shortcut', {
+        $('#map .leaflet-control-geocoder > button')[0].title = i18next.t('sidebar.layers.saved-gardens', {
             action: '$t(map.geocoder)',
             key: 'F',
         });
@@ -301,7 +315,8 @@
             requestUpdate,
         });
 
-        routingPathQuality = new BR.RoutingPathQuality(map, layersControl);
+        // routingPathQuality = new BR.RoutingPathQuality(map, layersControl);
+        wtmgSavedGardens = new BR.WTMGSavedGardens(map, layersControl);
 
         routing = new BR.Routing(profile, {
             routing: {
@@ -309,6 +324,8 @@
             },
             styles: BR.conf.routingStyles,
         });
+
+        layersControl.setRouting(routing);
 
         pois = new BR.PoiMarkers(routing);
 
@@ -359,7 +376,7 @@
                 segmentsLayer = routing._segments;
 
             elevation.update(track, segmentsLayer);
-            routingPathQuality.update(track, segmentsLayer);
+            // routingPathQuality.update(track, segmentsLayer);
             if (BR.conf.transit) {
                 itinerary.update(track, segments);
             } else {
@@ -423,7 +440,8 @@
         BR.routeLoader(map, layersControl, routing, pois);
 
         pois.addTo(map);
-        routingPathQuality.addTo(map);
+        // routingPathQuality.addTo(map);
+        wtmgSavedGardens.addTo(map);
 
         map.addControl(
             new BR.OpacitySliderControl({
@@ -546,6 +564,44 @@
 
         $('.modal').on('shown.bs.modal', function (e) {
             $('input:visible:enabled:first', e.target).focus();
+        });
+
+        // Hacky menu rearrange party
+        // This did not work in addTo(map)
+        // 1. Move first two children of .leaflet-control-layers-overlays to .leaflet-control-layers-overlays-wtmg
+        var $overlays = $('.leaflet-control-layers-overlays');
+        var $wtmg = $('.leaflet-control-layers-overlays-wtmg');
+        if (!$overlays.length) {
+            console.log("overlays don't exist");
+        }
+        $overlays.children().slice(0, 2).appendTo($wtmg);
+
+        // 2. Move the last (now only) child to .leaflet-control-layers-saved-gardens
+        var $savedGardens = $('.leaflet-control-layers-saved-gardens');
+        $overlays.children().last().appendTo($savedGardens);
+
+        $('.leaflet-control-layers-overlays-rail');
+
+        // Listen to check/uncheck events on the rail overlay checkbox
+        var $railCheckbox = $('.leaflet-control-layers-overlays-rail input.leaflet-control-layers-selector');
+        var $baseRadios = $('.leaflet-control-layers-base input.leaflet-control-layers-selector');
+
+        // TODO: load default checked state from map state
+        // the last is loaded from localstorage
+        $railCheckbox.on('change', function () {
+            if (this.checked) {
+                // These layers listen to the click event, not the change event
+                // see https://github.com/Leaflet/Leaflet/blob/bd88f73e8ddb90eb945a28bc1de9eb07f7386118/src/control/Control.Layers.js#L336
+                // If checked, select the 2nd base radio
+                $baseRadios.eq(1).prop('checked', true).trigger('click');
+            } else {
+                // If unchecked, select the 1st base radio
+                $baseRadios.eq(0).prop('checked', true).trigger('click');
+            }
+
+            // TODO: this could probably be implemented more cleanly by interfacing with the registered layers
+            // through layersControl (Control.Layers)
+            // console.log(layersControl.getActiveBaseLayer());
         });
     }
 

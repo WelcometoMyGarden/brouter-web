@@ -128,11 +128,11 @@
     "layer": {
       "bing": "Zdjęcia lotnicze Bing",
       "cycle": "OpenCycleMap",
-      "cycling": "Jazda na rowerze (oznaczone szlaki)",
+      "cycling": "",
       "digitalglobe": "DigitalGlobe",
       "esri": "Esri",
       "hikebike-hillshading": "Cieniowanie (Mapa wspinaczkowo-rowerowa)",
-      "hiking": "Wspinaczka (oznaczone szlaki)",
+      "hiking": "",
       "hillshading": "Cieniowanie",
       "osm": "OpenStreetMap",
       "osmde": "OpenStreetMap.de",

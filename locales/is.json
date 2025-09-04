@@ -128,11 +128,11 @@
     "layer": {
       "bing": "Bing Aerial loftmyndir",
       "cycle": "OpenCycleMap",
-      "cycling": "Hjólandi (Waymarked Trails)",
+      "cycling": "",
       "digitalglobe": "DigitalGlobe nýlegt myndefni",
       "esri": "Esri World Imagery heimsmyndasafnið",
       "hikebike-hillshading": "Hæðaskygging (göngu- og hjólakort)",
-      "hiking": "Gangandi (Waymarked Trails)",
+      "hiking": "",
       "hillshading": "Hæðaskygging",
       "osm": "OpenStreetMap",
       "osmde": "OpenStreetMap.de",

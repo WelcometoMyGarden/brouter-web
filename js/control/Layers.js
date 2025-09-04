@@ -90,9 +90,9 @@ BR.Layers = L.Class.extend({
             }
         });
 
-        L.DomUtil.get('custom_layers_button').onclick = function () {
-            $('#custom_layers').modal();
-        };
+        // L.DomUtil.get('custom_layers_button').onclick = function () {
+        //     $('#custom_layers').modal();
+        // };
     },
 
     _remove(evt) {

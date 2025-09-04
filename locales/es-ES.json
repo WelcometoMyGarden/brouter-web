@@ -128,11 +128,11 @@
     "layer": {
       "bing": "Bing Aerial",
       "cycle": "OpenCycleMap",
-      "cycling": "Ciclismo (senderos marcados)",
+      "cycling": "",
       "digitalglobe": "Imágenes recientes de DigitalGlobe",
       "esri": "Imágenes del mundo de Esri",
       "hikebike-hillshading": "Sombreado de colinas (mapa de senderismo y bicicleta)",
-      "hiking": "Senderismo (senderos marcados)",
+      "hiking": "",
       "hillshading": "Sombreado",
       "osm": "OpenStreetMap",
       "osmde": "OpenStreetMap.de",

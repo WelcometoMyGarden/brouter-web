@@ -410,7 +410,8 @@ https://css-tricks.com/svg-line-animation-works/
     border-radius: 10px;
 }
 
-.slider#overlay {
+.slider#overlay,
+.slider#wtmg-radius {
     display: block;
 }
 
@@ -1226,6 +1227,24 @@ table.dataTable.display tbody tr:hover.selected {
 @media screen and (min-width: 992px) {
     .leaflet-control.leaflet-bar .btn-feedback {
         font-size: 1.1rem;
-        padding: 0.05em 0.4em
+        padding: 0.05em 0.4em;
     }
+}
+
+/* Simplification css */
+
+/* Hide all base layers */
+
+#tab_profile_toggle_button {
+    display: none;
+}
+
+#tab_layers_control h2 {
+    font-size: 1em;
+    margin-top: 0.2rem;
+    font-weight: 600;
+}
+
+.leaflet-control-layers-overlays-wtmg > label {
+    display: block;
 }

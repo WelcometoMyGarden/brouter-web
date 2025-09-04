@@ -128,11 +128,11 @@
     "layer": {
       "bing": "Bing aeri",
       "cycle": "OpenCycleMap",
-      "cycling": "Bici (camins marcats)",
+      "cycling": "",
       "digitalglobe": "Imatgeria recent de DigitalGlobe",
       "esri": "Imatgeria del món d'Esri",
       "hikebike-hillshading": "Ombreig del relleu (mapa per caminades i bici)",
-      "hiking": "Caminada (camins marcats)",
+      "hiking": "",
       "hillshading": "Ombreig del relleu ",
       "osm": "OpenStreetMap",
       "osmde": "OpenStreetMap.de",

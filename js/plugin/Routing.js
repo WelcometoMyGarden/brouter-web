@@ -4,6 +4,8 @@ L.Routing.Draw.prototype._hideTrailer = function () {
     }
 };
 
+// Extending github.com/nrenner/leaflet-routing
+// Based on https://github.com/Turistforeningen/leaflet-routing
 BR.Routing = L.Routing.extend({
     statics: {
         hasBeeline: (segments) => segments?.filter((line) => line?._routing?.beeline).length > 0,
@@ -53,12 +55,29 @@ BR.Routing = L.Routing.extend({
         this.options.tooltips.segment = i18next.t('map.route-tooltip-segment');
 
         this._segmentsCasing = new L.FeatureGroup().addTo(map);
+        this._poiRadius = new L.FeatureGroup().addTo(map);
+        this._gardensInRadius = new L.FeatureGroup().addTo(map);
         this._loadingTrailerGroup = new L.FeatureGroup().addTo(map);
 
         var container = L.Routing.prototype.onAdd.call(this, map);
 
         this._segments.on('layeradd', this._addSegmentCasing, this);
         this._segments.on('layerremove', this._removeSegmentCasing, this);
+
+        // this._segments.on(
+        //     'layeradd',
+        //     // {layer: {feature, ...}, target, type, sourceTarget}
+        //     ({ layer }) => {
+        //         // Can not be used since the toPolyline utils wont work
+        //         // use routing:routeWaypointEnd or something
+        //         // this.setWTMGRadius(1);
+        //     },
+        //     this
+        // );
+
+        this.on('routing:routeWaypointEnd', function () {
+            this.reflowWTMGRadius();
+        });
 
         this._waypoints.on('layeradd', this._setMarkerOpacity, this);
 
@@ -243,10 +262,113 @@ BR.Routing = L.Routing.extend({
         L.DomEvent.addListener(document, 'keydown', this._keydownListener, this);
         L.DomEvent.addListener(document, 'keyup', this._keyupListener, this);
 
+        self = this;
+        this._map.on('zoomend', function () {
+            if (self._gardensInRadius) {
+                const wtmgIcon = self.getWTMGIcon();
+                for (const l of self._gardensInRadius
+                    .getLayers()
+                    .map((l) => l.getLayers())
+                    .flat()) {
+                    l.setIcon(wtmgIcon);
+                }
+            }
+        });
+
         // enable drawing mode
         this.draw(true);
 
         return container;
+    },
+    setWTMGVisible(bool) {
+        if (bool) {
+            this._poiRadius.show();
+            this._gardensInRadius.show();
+        } else {
+            this._poiRadius.hide();
+            this._gardensInRadius.hide();
+        }
+    },
+    setWTMGRadius(kms) {
+        if (this._wtmgRadius === +kms) {
+            return;
+        }
+        this._wtmgRadius = +kms;
+        this.reflowWTMGRadius();
+    },
+    getWTMGIcon() {
+        var currentZoom = this._map.getZoom();
+        const desiredSize = Math.min(30, (currentZoom - 5) * 5);
+        let newIcon = new BR.WTMGIcon(undefined, { iconSize: [desiredSize, desiredSize] });
+        return newIcon;
+    },
+    reflowWTMGRadius() {
+        if (this._segments.getLayers().length === 0) return;
+        this._poiRadius.clearLayers();
+        // Reset poi buffer
+        // Segment layers are L.PolyLine objects
+        // https://github.com/nrenner/leaflet-routing/blob/2ad0176c72e32246d640759966a6e631fcd84b55/src/L.Routing.js#L448
+        // const fullLine = L.Routing.prototype.toPolyline.call(this).toGeoJSON();
+        const fullPolyLine = this.toPolyline();
+        if (fullPolyLine.getLatLngs().length === 0) {
+            console.warn('Not a usable polyline');
+            return;
+        }
+        const fullLine = fullPolyLine.toGeoJSON();
+        const buffered = turf.buffer(fullLine, this._wtmgRadius ?? 1, { units: 'kilometers' });
+        const styled = L.geoJSON(buffered, {
+            style: {
+                color: '#33333358', // light gray stroke
+                weight: 0.5, // thin border
+                fillColor: '#33333334', // light gray fill
+                fillOpacity: 1, // very translucent
+            },
+        });
+        this._poiRadius.addLayer(styled);
+        if (window.wtmg && this._segments.getLayers().length > 0) {
+            this._gardensInRadius.clearLayers();
+            const gardenFeatures = {
+                type: 'FeatureCollection',
+                features: wtmg.gardens.map((garden) => {
+                    return {
+                        type: 'Feature',
+                        properties: {
+                            id: garden.id,
+                            ...garden,
+                            lnglat: [garden.location.longitude, garden.location.latitude],
+                            // icon: currentSelectedGardenId === garden.id ? 'tent-filled' : 'tent'
+                        },
+                        geometry: {
+                            type: 'Point',
+                            coordinates: [garden.location.longitude, garden.location.latitude],
+                        },
+                    };
+                }),
+            };
+
+            const wtmgIcon = this.getWTMGIcon();
+            const pointsWithin = turf.within(gardenFeatures, buffered);
+            const pointsGeoJSON = L.geoJSON(pointsWithin, {
+                styled: {
+                    fillColor: 'hotpink',
+                },
+                pointToLayer: function (feature, latlng) {
+                    return L.marker(latlng, { icon: wtmgIcon });
+                },
+                onEachFeature: function (feature, layer) {
+                    const htmlContent = document.createElement('div');
+                    htmlContent.innerHTML = `
+                                <div id="description"></div>
+                                <a href="${BR.conf.wtmgHost}/explore/garden/${feature.properties.id}" target="_blank">
+                                    View garden on WTMG
+                                </a>`;
+                    const descriptionContainer = htmlContent.children[0];
+                    descriptionContainer.innerText = feature.properties.description;
+                    layer.bindPopup(htmlContent);
+                },
+            });
+            this._gardensInRadius.addLayer(pointsGeoJSON);
+        }
     },
 
     _addSegmentCasing(e) {

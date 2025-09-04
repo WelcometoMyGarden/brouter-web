@@ -137,11 +137,11 @@
     "layer": {
       "bing": "Imagerie aérienne BING",
       "cycle": "OpenCycleMap",
-      "cycling": "Cycling (Sentiers balisés)",
+      "cycling": "Afficher les itinéraires cyclables",
       "digitalglobe": "Imagerie récente DigitalGlobe",
       "esri": "Imagerie mondiale Esri",
       "hikebike-hillshading": "Relief avec ombre (carte randonnée et vélo)",
-      "hiking": "Randonnée (Sentiers balisés)",
+      "hiking": "Afficher les itinéraires de randonnée",
       "hillshading": "Relief avec ombre",
       "osm": "OpenStreetMap",
       "osmde": "OpenStreetMap.de",
@@ -293,7 +293,13 @@
         "type_overpass_query": "Requête Overpass"
       },
       "title": "Calques",
-      "tooltip": "Sélection des calques"
+      "tooltip": "Sélection des calques",
+      "wtmg-radius-slider": "Afficher les jardins le long de l’itinéraire",
+      "saved-gardens": "Afficher les jardins sauvegardés",
+      "wtmg-gardens": "Jardins WTMG",
+      "hiking-cycling-routes": "Itinéraires cyclables et de randonnées",
+      "train-layer": "Afficher le réseau ferroviaire",
+      "rail-network": "Réseau ferroviaire"
     },
     "profile": {
       "apply": "Appliquer",
@@ -335,5 +341,8 @@
     "new-version": "Une nouvelle version est disponible depuis votre dernière visite. Cliquez <a href='.' data-toggle='modal' data-target='#whatsnew'>ici</a> pour voir les nouveautés !",
     "title": "Nouveautés"
   },
-  "feedback-formid": "nr4dzo"
+  "feedback-formid": "nr4dzo",
+  "siderbar": {
+    "layers": {}
+  }
 }

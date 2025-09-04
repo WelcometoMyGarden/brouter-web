@@ -128,11 +128,11 @@
     "layer": {
       "bing": "Bing Luftbild",
       "cycle": "OpenCycleMap",
-      "cycling": "Radfahren (markierte Routen)",
+      "cycling": "",
       "digitalglobe": "DigitalGlobe neueste Bilder",
       "esri": "Esri Weltbilder",
       "hikebike-hillshading": "Höhenschummerung (Hike & Bike Map)",
-      "hiking": "Wandern (markierte Routen)",
+      "hiking": "",
       "hillshading": "Höhenschummerung",
       "osm": "OpenStreetMap",
       "osmde": "OpenStreetMap.de",

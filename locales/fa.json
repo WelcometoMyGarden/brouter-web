@@ -128,11 +128,11 @@
     "layer": {
       "bing": "Bing Aerial",
       "cycle": "OpenCycleMap",
-      "cycling": "دوچرخه‌سواری (مسیرهای مشخص شده)",
+      "cycling": "",
       "digitalglobe": "تصاویر اخیر DigitalGlobe",
       "esri": "Esri World Imagery",
       "hikebike-hillshading": "تپه‌ها (نقشه پیاده‌روی و دوچرخه‌سواری)",
-      "hiking": "پیاده‌روی (مسیرهای علامت‌گذاری شده)",
+      "hiking": "",
       "hillshading": "سایه زنی",
       "osm": "اوپن‌استریت‌مپ",
       "osmde": "OpenStreetMap.de",

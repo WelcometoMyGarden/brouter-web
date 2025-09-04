@@ -128,11 +128,11 @@
     "layer": {
       "bing": "Bing Aerial",
       "cycle": "OpenCycleMap",
-      "cycling": "Sykling (markerte stier)",
+      "cycling": "",
       "digitalglobe": "DigitalGlobe nylige ortofoto",
       "esri": "Esri World ortofoto",
       "hikebike-hillshading": "Høydeskygging (Kart for gå- og sykkeltur)",
-      "hiking": "Gåtur (markerte stier)",
+      "hiking": "",
       "hillshading": "Høydeskygger",
       "osm": "OpenStreetMap",
       "osmde": "OpenStreetMap.de",

@@ -2,11 +2,11 @@ BR.confLayers = {};
 
 BR.confLayers.defaultBaseLayers = [
     'standard',
-    'OpenTopoMap',
+    // 'OpenTopoMap',
     // 'Stamen.Terrain',
-    'Esri.WorldImagery',
-    'cyclosm',
-    'opencylemap',
+    // 'Esri.WorldImagery',
+    // 'cyclosm',
+    // 'opencylemap',
     'transport'
             
 ];
@@ -21,8 +21,8 @@ BR.confLayers.languageDefaultLayers = [
 BR.confLayers.defaultOverlays =  [
     'Waymarked_Trails-Cycling',
     'Waymarked_Trails-Hiking',
-    'terrarium-hillshading',
-    'openrailwaymap',
+    // 'terrarium-hillshading',
+    // 'openrailwaymap',
 ];
 
 BR.confLayers.legacyNameToIdMap = {

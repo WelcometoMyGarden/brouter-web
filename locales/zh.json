@@ -128,11 +128,11 @@
     "layer": {
       "bing": "Bing 空照圖",
       "cycle": "開放單車地圖",
-      "cycling": "自行車 (Waymarked Trails)",
+      "cycling": "",
       "digitalglobe": "DigitalGlobe 最新空照圖",
       "esri": "Esri 世界影像圖",
       "hikebike-hillshading": "山地陰影 (登山或單車地圖)",
-      "hiking": "遠足 (Waymarked Trails)",
+      "hiking": "",
       "hillshading": "山地陰影",
       "osm": "OpenStreetMap 開放街圖",
       "osmde": "OpenStreetMap.de",

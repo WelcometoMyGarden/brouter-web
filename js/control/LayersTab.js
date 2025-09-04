@@ -1,3 +1,5 @@
+// Extends ControlLayers which itself extends L.Control.Layers https://github.com/Leaflet/Leaflet/blob/v1.7.1/src/control/Control.Layers.js
+//
 BR.LayersTab = BR.ControlLayers.extend({
     previewLayer: null,
     previewBounds: null,
@@ -16,6 +18,7 @@ BR.LayersTab = BR.ControlLayers.extend({
         L.DomUtil.get('layers-control-wrapper').appendChild(this._section);
 
         this.initOpacitySlider(map);
+        this.initWTMGRadiusSlider(map);
         this.initButtons();
         this.initJsTree();
 
@@ -60,6 +63,56 @@ BR.LayersTab = BR.ControlLayers.extend({
         });
         L.DomUtil.get('leaflet-control-layers-overlays-opacity-slider').appendChild(overlayOpacitySlider.getElement());
     },
+    initWTMGRadiusSlider(map) {
+        var self = this;
+        // in km
+        const defaultRadius = BR.Util.localStorageAvailable() ? +(localStorage['wtmgRadiusValue'] ?? 1) : 1;
+        const min = 0.25;
+        const max = 20;
+        const radiusTextInput = $('#wtmg-radius-val');
+        var wtmgRadiusSlider = new BR.WTMGRadiusSlider({
+            id: 'wtmg-radius',
+            defaultValue: defaultRadius,
+            title: i18next.t('layers.opacity-slider'),
+            min,
+            max,
+            callback(val) {
+                radiusTextInput.val(val);
+                if (self.routing) {
+                    self.routing.setWTMGRadius(+val);
+                }
+            },
+        });
+        radiusTextInput.val(defaultRadius);
+        radiusTextInput.on('change', function () {
+            var inputValue = +this.value;
+            if (inputValue > max) {
+                inputValue = max;
+                radiusTextInput.val(max);
+            }
+            if (inputValue < min) {
+                inputValue = min;
+                radiusTextInput.val(min);
+            }
+            if (self.routing) {
+                self.routing.setWTMGRadius(inputValue);
+                wtmgRadiusSlider.setValue(inputValue);
+            }
+        });
+
+        $('.wtmg-radius-slider-refinement').append(wtmgRadiusSlider.getElement());
+
+        const refinementElements = $('.wtmg-radius-slider-refinement');
+        $('#wtmg-radius-control').on('change', function () {
+            if (this.checked) {
+                self.routing.setWTMGVisible(true);
+                refinementElements.show();
+            } else {
+                self.routing.setWTMGVisible(false);
+                refinementElements.hide();
+            }
+        });
+    },
 
     initButtons() {
         var expandTree = function (e) {
@@ -86,7 +139,7 @@ BR.LayersTab = BR.ControlLayers.extend({
         L.DomUtil.get('expand_tree_button').onclick = L.bind(expandTree, this);
         L.DomUtil.get('collapse_tree_button').onclick = L.bind(collapseTree, this);
 
-        L.DomUtil.get('optional_layers_button').onclick = L.bind(toggleOptionalLayers, this);
+        // L.DomUtil.get('optional_layers_button').onclick = L.bind(toggleOptionalLayers, this);
     },
 
     initJsTree() {
@@ -488,6 +541,10 @@ BR.LayersTab = BR.ControlLayers.extend({
             slider.show();
             slider.children()[1].innerText = i18next.t('sidebar.layers.overlay-opacity', { count: overlaysCount });
         }
+    },
+
+    setRouting(routing) {
+        this.routing = routing;
     },
 });
 

@@ -178,11 +178,11 @@
     "layer": {
       "bing": "Bing Aerial",
       "cycle": "OpenCycleMap",
-      "cycling": "Cycling (Waymarked Trails)",
+      "cycling": "Show cycling routes",
       "digitalglobe": "DigitalGlobe Recent Imagery",
       "esri": "Esri World Imagery",
       "hikebike-hillshading": "Hillshading (Hike & Bike Map)",
-      "hiking": "Hiking (Waymarked Trails)",
+      "hiking": "Show hiking routes",
       "hillshading": "Hillshading",
       "osm": "OpenStreetMap",
       "osmde": "OpenStreetMap.de",
@@ -411,7 +411,13 @@
         "type_overpass_query": "Overpass Query"
       },
       "title": "Layers",
-      "tooltip": "Select layers"
+      "tooltip": "Select layers",
+      "wtmg-gardens": "WTMG gardens",
+      "wtmg-radius-slider": "Show gardens along route",
+      "hiking-cycling-routes": "Hiking & cycling routes",
+      "saved-gardens": "Show saved gardens",
+      "rail-network": "Railway network",
+      "train-layer": "Show train network"
     },
     "profile": {
       "apply": "Apply",

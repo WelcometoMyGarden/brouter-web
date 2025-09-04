@@ -128,11 +128,11 @@
     "layer": {
       "bing": "Bing Aerial",
       "cycle": "OpenCycleMap",
-      "cycling": "Ciclismo (itinerari segnalati)",
+      "cycling": "",
       "digitalglobe": "DigitalGlobe immagini recenti",
       "esri": "Esri World Imagery",
       "hikebike-hillshading": "Rilievo ombreggiato (Hike & Bike Map)",
-      "hiking": "Escursionismo (itinerari segnalati)",
+      "hiking": "",
       "hillshading": "Rilievo ombreggiato",
       "osm": "OpenStreetMap",
       "osmde": "OpenStreetMap.de",
