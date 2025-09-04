@@ -360,7 +360,7 @@ BR.Routing = L.Routing.extend({
                     htmlContent.innerHTML = `
                                 <div id="description"></div>
                                 <a href="${BR.conf.wtmgHost}/explore/garden/${feature.properties.id}" target="_blank">
-                                    View garden on WTMG
+                                    ${i18next.t('layers.wtmg.view-garden')}
                                 </a>`;
                     const descriptionContainer = htmlContent.children[0];
                     descriptionContainer.innerText = feature.properties.description;

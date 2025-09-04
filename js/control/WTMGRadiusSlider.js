@@ -72,5 +72,8 @@ BR.WTMGRadiusSlider = L.Class.extend({
 
     setValue(val) {
         this.input.slider('setValue', val);
+        if (BR.Util.localStorageAvailable()) {
+            localStorage['wtmgRadiusValue'] = val;
+        }
     },
 });

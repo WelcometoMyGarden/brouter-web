@@ -85,7 +85,10 @@
     "customize": "Pas lagen aan",
     "opacity-slider": "Transparantie",
     "overpass-loading-indicator": "Overpass API aanvraag draaien...",
-    "remove-selection": "Verwijder selectie"
+    "remove-selection": "Verwijder selectie",
+    "wtmg": {
+      "view-garden": "Voir ce jardin"
+    }
   },
   "loadNogos": {
     "defaultProperties": "Standaard eigenschappen",
@@ -339,5 +342,8 @@
   "feedback-formid": "nPxXV1",
   "siderbar": {
     "layers": {}
+  },
+  "wtmg": {
+    "members": "Leden"
   }
 }

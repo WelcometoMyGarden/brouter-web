@@ -90,7 +90,10 @@
     "customize": "Personnaliser les calques",
     "opacity-slider": "Curseur d'opacité",
     "overpass-loading-indicator": "Exécution de la requête Overpass",
-    "remove-selection": "Supprimer la sélection"
+    "remove-selection": "Supprimer la sélection",
+    "wtmg": {
+      "view-garden": "Voir ce jardin"
+    }
   },
   "loadNogos": {
     "defaultProperties": "Propriétés par défaut",
@@ -344,5 +347,8 @@
   "feedback-formid": "nr4dzo",
   "siderbar": {
     "layers": {}
+  },
+  "wtmg": {
+    "members": "Membres"
   }
 }

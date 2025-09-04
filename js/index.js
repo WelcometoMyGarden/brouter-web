@@ -17,9 +17,34 @@
             if (event.origin !== wtmgOrigin) return;
             window.wtmg = event.data;
             mapContext.map.fire('wtmg:data', event.data);
+            if (event.data.member) {
+                $(document.documentElement).addClass('member');
+
+                // Enable member only features
+                $('.member-only, #wtmg-garden-setting input').attr('disabled', false);
+            } else {
+                $(document.documentElement).removeClass('member');
+            }
         },
         false
     );
+
+    $('#wtmg-garden-setting, .leaflet-control-layers-overlays-rail')
+        .get()
+        .forEach((el) =>
+            el.addEventListener(
+                'click',
+                function (ev) {
+                    if (!wtmg.member) {
+                        ev.stopPropagation();
+                        ev.preventDefault();
+
+                        window.parent.postMessage('login-member', wtmgOrigin);
+                    }
+                },
+                true
+            )
+        );
 
     var initialHash = window.location.hash;
     if (initialHash === '#tutorial') {
@@ -603,6 +628,34 @@
             // through layersControl (Control.Layers)
             // console.log(layersControl.getActiveBaseLayer());
         });
+
+        //
+        // Disable member only features
+        $('.member-only, #wtmg-garden-setting input').attr('disabled', true);
+        $('.wtmg-radius-slider-refinement').hide();
+
+        let activated = false;
+        function activateForMember() {
+            console.log('Activating');
+            layersControl.initWTMGRadiusSlider();
+            $('.wtmg-radius-slider-refinement').show();
+            // Activate saved gardens by default for members
+            const savedGardenLayer = layersControl.getLayerFromString('saved-gardens');
+            if (savedGardenLayer) {
+                layersControl.activateLayer(savedGardenLayer);
+            }
+            activated = true;
+        }
+
+        if (window.wtmg && wtmg.member && !activated) {
+            activateForMember();
+        } else {
+            map.on('wtmg:data', () => {
+                if (window.wtmg.member && !activated) {
+                    activateForMember();
+                }
+            });
+        }
     }
 
     i18next.on('languageChanged', function (detectedLanguage) {

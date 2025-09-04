@@ -18,7 +18,6 @@ BR.LayersTab = BR.ControlLayers.extend({
         L.DomUtil.get('layers-control-wrapper').appendChild(this._section);
 
         this.initOpacitySlider(map);
-        this.initWTMGRadiusSlider(map);
         this.initButtons();
         this.initJsTree();
 
@@ -103,8 +102,13 @@ BR.LayersTab = BR.ControlLayers.extend({
         $('.wtmg-radius-slider-refinement').append(wtmgRadiusSlider.getElement());
 
         const refinementElements = $('.wtmg-radius-slider-refinement');
-        $('#wtmg-radius-control').on('change', function () {
+        const controlElem = $('#wtmg-radius-control');
+        if (!controlElem.checked) {
+            refinementElements.hide();
+        }
+        controlElem.on('change', function () {
             if (this.checked) {
+                console.log('yeah');
                 self.routing.setWTMGVisible(true);
                 refinementElements.show();
             } else {

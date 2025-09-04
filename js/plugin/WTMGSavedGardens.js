@@ -3,11 +3,16 @@ BR.WTMGSavedGardens = L.Control.extend({
         L.setOptions(this, options);
         this._gardenMarkersLayer = L.featureGroup();
         this._gardenMarkersLayer.id = 'saved-gardens';
-        layersControl.addOverlay(this._gardenMarkersLayer, i18next.t('sidebar.layers.saved-gardens'));
+        this._layersControl = layersControl;
+        this._layersControl.addOverlay(this._gardenMarkersLayer, i18next.t('sidebar.layers.saved-gardens'));
     },
     _wtmgListener(e) {
         if (!window.wtmg) {
             console.debug('WTMG data not loaded yet');
+        }
+        if (!window.wtmg.member) {
+            console.warn('Not loading saved gardens, not a member');
+            return;
         }
         const { gardens, savedGardens } = window.wtmg;
         this._gardenMarkersLayer.clearLayers();
@@ -27,6 +32,7 @@ BR.WTMGSavedGardens = L.Control.extend({
         map.on(
             'overlayadd',
             function (evt) {
+                console.log(evt);
                 if (evt.layer === this._gardenMarkersLayer) {
                     map.on('wtmg:data', this._wtmgListener, this);
                     if (window.wtmg) {

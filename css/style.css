@@ -1011,7 +1011,8 @@ table.dataTable.display tbody tr:hover.selected {
 }
 
 /* Gray out non selectable layers (zoom out of scope, etc.) */
-.leaflet-control-layers-selector[disabled] ~ span {
+.leaflet-control-layers-selector[disabled] ~ span,
+.leaflet-control-layers-selector[disabled] ~ label > span {
     color: #777;
 }
 
@@ -1247,4 +1248,21 @@ table.dataTable.display tbody tr:hover.selected {
 
 .leaflet-control-layers-overlays-wtmg > label {
     display: block;
+}
+
+.member-only-label {
+    border-radius: 1rem;
+    background: #ec9570;
+    font-size: 0.9em;
+    padding: 0.1em 0.7em;
+    color: white;
+    margin-left: 0.3em;
+}
+
+html:not(.member) #wtmg-garden-setting,
+html:not(.member) .leaflet-control-layers-overlays-rail,
+html:not(.member) #wtmg-garden-setting input,
+html:not(.member) #wtmg-garden-setting label,
+html:not(.member) .leaflet-control-layers-overlays-rail label {
+    cursor: pointer !important;
 }
