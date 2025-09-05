@@ -186,6 +186,8 @@
                 if (this.lastHash != hash) {
                     location.replace(hash);
                     this.lastHash = hash;
+                    // Includes hash sign in front
+                    window.parent.postMessage({ type: 'hash-update', hash }, BR.conf.wtmgHost);
                 }
             },
 

@@ -492,6 +492,7 @@
             layersControl.loadActiveLayers();
         }
 
+        // Apply URL changes to the router
         var onHashChangeCb = function (url) {
             var url2params = function (s = '') {
                 s = s.replace(/;/g, '|');
@@ -539,7 +540,8 @@
 
         // do not initialize immediately
         urlHash = new L.Hash(null, null);
-        // this callback is used to append anything in URL after L.Hash wrote #map=zoom/lat/lng/layer
+        // This callback is used to append anything in URL after L.Hash wrote #map=zoom/lat/lng/layer
+        // Called every time the hash changes
         urlHash.additionalCb = function () {
             var url = router
                 .getUrl(
@@ -642,7 +644,11 @@
             // Activate saved gardens by default for members
             const savedGardenLayer = layersControl.getLayerFromString('saved-gardens');
             if (savedGardenLayer) {
-                layersControl.activateLayer(savedGardenLayer);
+                // BUG: this works/activates the layer always, but when
+                // 1. disactivate, 2. reload -> it gets shown without checkbox tickd,
+                // and you can't remove it
+                // layersControl.activateLayer(savedGardenLayer);
+                // layersControl._update();
             }
             activated = true;
         }

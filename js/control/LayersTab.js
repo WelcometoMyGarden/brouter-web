@@ -108,7 +108,6 @@ BR.LayersTab = BR.ControlLayers.extend({
         }
         controlElem.on('change', function () {
             if (this.checked) {
-                console.log('yeah');
                 self.routing.setWTMGVisible(true);
                 refinementElements.show();
             } else {

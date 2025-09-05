@@ -21,7 +21,7 @@ BR.WTMGSavedGardens = L.Control.extend({
                 this._gardenMarkersLayer.addLayer(
                     L.marker([g.location.latitude, g.location.longitude], {
                         icon: new BR.WTMGIcon('tent-yellow'),
-                    })
+                    }).bindPopup(BR.WTMGShared.createGardenPopup(g))
                 );
             }
         }

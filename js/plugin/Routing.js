@@ -356,15 +356,7 @@ BR.Routing = L.Routing.extend({
                     return L.marker(latlng, { icon: wtmgIcon });
                 },
                 onEachFeature: function (feature, layer) {
-                    const htmlContent = document.createElement('div');
-                    htmlContent.innerHTML = `
-                                <div id="description"></div>
-                                <a href="${BR.conf.wtmgHost}/explore/garden/${feature.properties.id}" target="_blank">
-                                    ${i18next.t('layers.wtmg.view-garden')}
-                                </a>`;
-                    const descriptionContainer = htmlContent.children[0];
-                    descriptionContainer.innerText = feature.properties.description;
-                    layer.bindPopup(htmlContent);
+                    layer.bindPopup(BR.WTMGShared.createGardenPopup(feature.properties));
                 },
             });
             this._gardensInRadius.addLayer(pointsGeoJSON);
