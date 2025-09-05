@@ -1259,6 +1259,10 @@ table.dataTable.display tbody tr:hover.selected {
     margin-left: 0.3em;
 }
 
+html.member .member-only-label {
+    display: none;
+}
+
 html:not(.member) #wtmg-garden-setting,
 html:not(.member) .leaflet-control-layers-overlays-rail,
 html:not(.member) #wtmg-garden-setting input,
