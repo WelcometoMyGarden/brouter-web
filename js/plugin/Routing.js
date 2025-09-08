@@ -244,12 +244,14 @@ BR.Routing = L.Routing.extend({
 
                 // See this code as a reference
                 // https://github.com/nrenner/leaflet-routing/blob/2ad0176c72e32246d640759966a6e631fcd84b55/src/L.Routing.js#L290
+                // Note that this code is called after main effects of the removal already occurred
+                //
                 const removedMarker = e.marker;
-                // If the one-before first or first marker is removed, clear the routing
                 const prev = removedMarker._routing.prevMarker;
+                // If the one-before first or first marker is removed, clear the routing
                 const removedOneBeforeFirst =
                     prev && self.getFirst() && prev._leaflet_id === self.getFirst()._leaflet_id;
-                const removedFirst = self.getFirst() && removedMarker._leaflet_id == self.getFirst()._leaflet_id;
+                const removedFirst = prev == null && self._segments.getLayers().length === 0;
                 if (removedOneBeforeFirst || removedFirst) {
                     self._poiRadius.clearLayers();
                     self._gardensInRadius.clearLayers();

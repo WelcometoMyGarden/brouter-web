@@ -1270,3 +1270,13 @@ html:not(.member) #wtmg-garden-setting label,
 html:not(.member) .leaflet-control-layers-overlays-rail label {
     cursor: pointer !important;
 }
+
+/* Routing Segments are rendered in a canvas by leaflet
+https://github.com/nrenner/leaflet-routing/blob/2ad0176c72e32246d640759966a6e631fcd84b55/src/L.Routing.js#L104-L107
+But this canvas gets a z-index of 100, which is below the z-index 200 of the SVG-rendered radius polygon
+This is probalby a hacky way to put the segments always on top.
+If this acts up, check how the "routing path quality" was implemented, there a canvas seems to be embedded in a pane.
+ */
+#map > .leaflet-map-pane canvas {
+    z-index: 201;
+}
