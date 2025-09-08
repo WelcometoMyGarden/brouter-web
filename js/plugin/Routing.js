@@ -322,6 +322,10 @@ BR.Routing = L.Routing.extend({
         // Note: when the one-before-last marker is removed,
         // there will be no more segments, so the reflow will not happen.
         if (this._segments.getLayers().length === 0) return;
+
+        // Save hidden status
+        const wasHidden = this._poiRadius.isHidden();
+
         this._poiRadius.clearLayers();
         // Reset poi buffer
         // Segment layers are L.PolyLine objects
@@ -378,6 +382,11 @@ BR.Routing = L.Routing.extend({
                 },
             });
             this._gardensInRadius.addLayer(pointsGeoJSON);
+        }
+
+        if (wasHidden) {
+            this._gardensInRadius.hide();
+            this._poiRadius.hide();
         }
     },
 
