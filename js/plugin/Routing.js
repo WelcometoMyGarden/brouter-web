@@ -4,7 +4,7 @@ L.Routing.Draw.prototype._hideTrailer = function () {
     }
 };
 
-// Extending github.com/nrenner/leaflet-routing
+// Extending https://github.com/nrenner/leaflet-routing
 // Based on https://github.com/Turistforeningen/leaflet-routing
 BR.Routing = L.Routing.extend({
     statics: {
@@ -235,10 +235,24 @@ BR.Routing = L.Routing.extend({
         // although enabled.
         this.on(
             'waypoint:click',
-            function () {
-                if (this._hidden && !this._parent._waypoints._first) {
+            function (e) {
+                const self = this._parent;
+                if (this._hidden && !self._waypoints._first) {
                     this._show();
                     this._hideTrailer();
+                }
+
+                // See this code as a reference
+                // https://github.com/nrenner/leaflet-routing/blob/2ad0176c72e32246d640759966a6e631fcd84b55/src/L.Routing.js#L290
+                const removedMarker = e.marker;
+                // If the one-before first or first marker is removed, clear the routing
+                const prev = removedMarker._routing.prevMarker;
+                const removedOneBeforeFirst =
+                    prev && self.getFirst() && prev._leaflet_id === self.getFirst()._leaflet_id;
+                const removedFirst = self.getFirst() && removedMarker._leaflet_id == self.getFirst()._leaflet_id;
+                if (removedOneBeforeFirst || removedFirst) {
+                    self._poiRadius.clearLayers();
+                    self._gardensInRadius.clearLayers();
                 }
             },
             this._draw
@@ -303,6 +317,8 @@ BR.Routing = L.Routing.extend({
         return newIcon;
     },
     reflowWTMGRadius() {
+        // Note: when the one-before-last marker is removed,
+        // there will be no more segments, so the reflow will not happen.
         if (this._segments.getLayers().length === 0) return;
         this._poiRadius.clearLayers();
         // Reset poi buffer
@@ -436,6 +452,8 @@ BR.Routing = L.Routing.extend({
         this._waypoints._last = null;
         this._waypoints.clearLayers();
         this._segments.clearLayers();
+        this._gardensInRadius.clearLayers();
+        this._poiRadius.clearLayers();
         this._removeDistanceMarkers();
 
         if (drawEnabled) {
