@@ -69,7 +69,7 @@ BR.ShareRoute = L.Class.extend({
      * - displays buttons to change the size of the QR Code (small, medium, large)
      */
     qrcode() {
-        const exportUrl = this.createQrCodeUrl();
+        const exportUrl = this.getShareUrl();
 
         this.renderQrCode('share-qrcode-img', exportUrl, this.getQrCodeSizeForUrl(exportUrl));
 
@@ -119,29 +119,13 @@ BR.ShareRoute = L.Class.extend({
         }
     },
 
-    createQrCodeUrl() {
-        // We work on a copy of the current location instance to avoid
-        // reloading the page (which will happen when the `export` query
-        // parameter is added to the actual location object):
-        const exportLocation = new URL(document.location.href);
-        const searchParams = new URLSearchParams(exportLocation.search);
-
-        // We've to provide a value to the query parameter here, because
-        // URLSearchParams uses a list of tuples internally where the
-        // value part of such a tuple isn't optional. For now the value
-        // is 'dialog', but it's possible to add support for other values
-        // later, e.g. for starting a download directly after opening the link:
-        searchParams.set('export', 'dialog');
-        exportLocation.search = searchParams.toString();
-
-        return exportLocation.toString();
-    },
-
     getShareUrl() {
         const exportLocation = new URL(document.location.href);
-        const searchParams = new URLSearchParams(exportLocation.search);
+        const { host: wtmgHost } = new URL(BR.conf.wtmgHost);
+        exportLocation.host = wtmgHost;
+        exportLocation.pathname = '/routeplanner';
+        const { searchParams } = exportLocation;
         searchParams.delete('export');
-        exportLocation.search = searchParams.toString();
 
         return exportLocation.toString();
     },
