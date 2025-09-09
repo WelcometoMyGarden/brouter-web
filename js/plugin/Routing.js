@@ -55,6 +55,7 @@ BR.Routing = L.Routing.extend({
         this.options.tooltips.segment = i18next.t('map.route-tooltip-segment');
 
         this._segmentsCasing = new L.FeatureGroup().addTo(map);
+        this._wtmgEnabled = false;
         this._poiRadius = new L.FeatureGroup().addTo(map);
         this._gardensInRadius = new L.FeatureGroup().addTo(map);
         this._loadingTrailerGroup = new L.FeatureGroup().addTo(map);
@@ -296,7 +297,17 @@ BR.Routing = L.Routing.extend({
 
         return container;
     },
+    setWTMGEnabled(bool) {
+        this._wtmgEnabled = bool;
+        if (!bool) {
+            this._poiRadius.clearLayers();
+            this._gardensInRadius.clearLayers();
+        }
+    },
     setWTMGVisible(bool) {
+        if (this._poiRadius.getLayers().length === 0) {
+            return;
+        }
         if (bool) {
             this._poiRadius.show();
             this._gardensInRadius.show();
@@ -321,10 +332,13 @@ BR.Routing = L.Routing.extend({
     reflowWTMGRadius() {
         // Note: when the one-before-last marker is removed,
         // there will be no more segments, so the reflow will not happen.
-        if (this._segments.getLayers().length === 0) return;
+        const currentSegments = this._segments.getLayers().length;
+        if (!this._wtmgEnabled || currentSegments === 0) return;
 
         // Save hidden status
-        const wasHidden = this._poiRadius.isHidden();
+        // If this is the first segment, isHidden() will always report true due to no data
+        // being available yet in the layer
+        const wasHidden = this._poiRadius.isHidden() && currentSegments !== 1;
 
         this._poiRadius.clearLayers();
         // Reset poi buffer

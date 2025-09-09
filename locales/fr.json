@@ -146,7 +146,7 @@
       "hikebike-hillshading": "Relief avec ombre (carte randonnée et vélo)",
       "hiking": "Afficher les itinéraires de randonnée",
       "hillshading": "Relief avec ombre",
-      "osm": "OpenStreetMap",
+      "osm": "OpenStreetMap standard",
       "osmde": "OpenStreetMap.de",
       "outdoors": "Extérieur",
       "route-quality": "Chiffrage de la qualité de route",
@@ -302,7 +302,8 @@
       "wtmg-gardens": "Jardins WTMG",
       "hiking-cycling-routes": "Itinéraires cyclables et de randonnées",
       "train-layer": "Afficher le réseau ferroviaire",
-      "rail-network": "Réseau ferroviaire"
+      "rail-network": "Achtergrondkaart",
+      "extra-features": "Afficher les jardins WTMG"
     },
     "profile": {
       "apply": "Appliquer",

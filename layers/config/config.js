@@ -7,7 +7,7 @@ BR.confLayers.defaultBaseLayers = [
     // 'Esri.WorldImagery',
     // 'cyclosm',
     // 'opencylemap',
-    'transport'
+    // 'transport'
             
 ];
 
@@ -19,10 +19,12 @@ BR.confLayers.languageDefaultLayers = [
 ];
 
 BR.confLayers.defaultOverlays =  [
+    'cycling-title',
     'Waymarked_Trails-Cycling',
     'Waymarked_Trails-Hiking',
     // 'terrarium-hillshading',
     // 'openrailwaymap',
+    'wtmg-gardens-title'
 ];
 
 BR.confLayers.legacyNameToIdMap = {

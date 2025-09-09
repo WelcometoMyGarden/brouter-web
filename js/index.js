@@ -19,9 +19,6 @@
             mapContext.map.fire('wtmg:data', event.data);
             if (event.data.member) {
                 $(document.documentElement).addClass('member');
-
-                // Enable member only features
-                $('.member-only, #wtmg-garden-setting input').attr('disabled', false);
             } else {
                 $(document.documentElement).removeClass('member');
             }
@@ -29,22 +26,17 @@
         false
     );
 
-    $('#wtmg-garden-setting, .leaflet-control-layers-overlays-rail')
-        .get()
-        .forEach((el) =>
-            el.addEventListener(
-                'click',
-                function (ev) {
-                    if (!wtmg.member) {
-                        ev.stopPropagation();
-                        ev.preventDefault();
-
-                        window.parent.postMessage('login-member', wtmgOrigin);
-                    }
-                },
-                true
-            )
-        );
+    $('.wtmg-extra-features').on(
+        'click',
+        null,
+        null,
+        function () {
+            if (!wtmg.member) {
+                window.parent.postMessage('login-member', wtmgOrigin);
+            }
+        },
+        true
+    );
 
     var initialHash = window.location.hash;
     if (initialHash === '#tutorial') {
@@ -341,7 +333,6 @@
         });
 
         // routingPathQuality = new BR.RoutingPathQuality(map, layersControl);
-        wtmgSavedGardens = new BR.WTMGSavedGardens(map, layersControl);
 
         routing = new BR.Routing(profile, {
             routing: {
@@ -466,7 +457,6 @@
 
         pois.addTo(map);
         // routingPathQuality.addTo(map);
-        wtmgSavedGardens.addTo(map);
 
         map.addControl(
             new BR.OpacitySliderControl({
@@ -589,68 +579,68 @@
 
         BR.WhatsNew.init();
 
+        const breakpointNum = parseInt(BR.Util.getResponsiveBreakpoint().substring(0, 1));
+        if (breakpointNum >= 3) {
+            sidebar.open('tab_layers_control');
+        }
+
         $('.modal').on('shown.bs.modal', function (e) {
             $('input:visible:enabled:first', e.target).focus();
         });
 
-        // Hacky menu rearrange party
-        // This did not work in addTo(map)
-        // 1. Move first two children of .leaflet-control-layers-overlays to .leaflet-control-layers-overlays-wtmg
-        var $overlays = $('.leaflet-control-layers-overlays');
-        var $wtmg = $('.leaflet-control-layers-overlays-wtmg');
-        if (!$overlays.length) {
-            console.log("overlays don't exist");
-        }
-        $overlays.children().slice(0, 2).appendTo($wtmg);
-
-        // 2. Move the last (now only) child to .leaflet-control-layers-saved-gardens
-        var $savedGardens = $('.leaflet-control-layers-saved-gardens');
-        $overlays.children().last().appendTo($savedGardens);
-
-        $('.leaflet-control-layers-overlays-rail');
-
-        // Listen to check/uncheck events on the rail overlay checkbox
-        var $railCheckbox = $('.leaflet-control-layers-overlays-rail input.leaflet-control-layers-selector');
-        var $baseRadios = $('.leaflet-control-layers-base input.leaflet-control-layers-selector');
-
-        // TODO: load default checked state from map state
-        // the last is loaded from localstorage
-        $railCheckbox.on('change', function () {
-            if (this.checked) {
-                // These layers listen to the click event, not the change event
-                // see https://github.com/Leaflet/Leaflet/blob/bd88f73e8ddb90eb945a28bc1de9eb07f7386118/src/control/Control.Layers.js#L336
-                // If checked, select the 2nd base radio
-                $baseRadios.eq(1).prop('checked', true).trigger('click');
-            } else {
-                // If unchecked, select the 1st base radio
-                $baseRadios.eq(0).prop('checked', true).trigger('click');
-            }
-
-            // TODO: this could probably be implemented more cleanly by interfacing with the registered layers
-            // through layersControl (Control.Layers)
-            // console.log(layersControl.getActiveBaseLayer());
-        });
+        // TODO: this could probably be implemented more cleanly by interfacing with the registered layers
+        // through layersControl (Control.Layers)
+        // console.log(layersControl.getActiveBaseLayer());
 
         //
         // Disable member only features
-        $('.member-only, #wtmg-garden-setting input').attr('disabled', true);
-        $('.wtmg-radius-slider-refinement').hide();
+        // $('.member-only, #wtmg-garden-setting input').attr('disabled', true);
+        // $('.wtmg-radius-slider-refinement').hide();
 
         let activated = false;
+        let isActivating = false;
         function activateForMember() {
+            if (activated || isActivating) {
+                console.log('Called activation 2nd time');
+                return;
+            }
+            isActivating = true;
             console.log('Activating');
+            // Enable WTMG routing side-effects
+            routing.setWTMGEnabled(true);
             layersControl.initWTMGRadiusSlider();
-            $('.wtmg-radius-slider-refinement').show();
+            const trainLayerData = BR.layerIndex['transport'];
+            const trainLayer = layersControl.createLayer(trainLayerData);
+            layersControl.addBaseLayer(trainLayer, trainLayerData.properties.name);
+            wtmgSavedGardens = new BR.WTMGSavedGardens(map, layersControl);
+            wtmgSavedGardens.addTo(map);
+
+            // Enable member only features
+            // $('.member-only, #wtmg-garden-setting input').attr('disabled', false);
             // Activate saved gardens by default for members
             const savedGardenLayer = layersControl.getLayerFromString('saved-gardens');
             if (savedGardenLayer) {
-                // BUG: this works/activates the layer always, but when
-                // 1. disactivate, 2. reload -> it gets shown without checkbox tickd,
-                // and you can't remove it
-                // layersControl.activateLayer(savedGardenLayer);
-                // layersControl._update();
+                layersControl.activateLayer(savedGardenLayer);
             }
+
             activated = true;
+            isActivating = false;
+        }
+
+        let isLoggingOut = false;
+        function logOut() {
+            isLoggingOut = true;
+            const savedGardenLayer = layersControl.getLayerFromString('saved-gardens');
+
+            // Remove saved gardens
+            if (map.hasLayer(savedGardenLayer?.layer)) {
+                layersControl.removeLayer(savedGardenLayer.layer);
+                map.removeLayer(savedGardenLayer.layer);
+            }
+            // Disable WTMG routing side-effects
+            routing.setWTMGEnabled(false);
+            isLoggingOut = false;
+            activated = false;
         }
 
         if (window.wtmg && wtmg.member && !activated) {
@@ -659,6 +649,10 @@
             map.on('wtmg:data', () => {
                 if (window.wtmg.member && !activated) {
                     activateForMember();
+                }
+                if (activated && !window.wtmg.member && !isLoggingOut) {
+                    console.log('Logging out');
+                    logOut();
                 }
             });
         }

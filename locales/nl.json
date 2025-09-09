@@ -141,7 +141,7 @@
       "hikebike-hillshading": "Hillshading (Hike & Bike Map)",
       "hiking": "Toon wandelroutes",
       "hillshading": "Bergschaduw",
-      "osm": "OpenStreetMap",
+      "osm": "",
       "osmde": "OpenStreetMap.de",
       "outdoors": "Outdoors",
       "route-quality": "Routekwaliteitscodering",
@@ -297,7 +297,8 @@
       "wtmg-gardens": "WTMG-tuinen",
       "hiking-cycling-routes": "Fiets- en wandelroutes",
       "train-layer": "Toon treinnetwerk",
-      "rail-network": "Spoornetwerk"
+      "rail-network": "Spoornetwerk",
+      "extra-features": "Toon WTMG-tuinen"
     },
     "profile": {
       "apply": "Pas toe",

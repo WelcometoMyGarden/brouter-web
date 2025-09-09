@@ -65,7 +65,7 @@ BR.LayersTab = BR.ControlLayers.extend({
     initWTMGRadiusSlider(map) {
         var self = this;
         // in km
-        const defaultRadius = BR.Util.localStorageAvailable() ? +(localStorage['wtmgRadiusValue'] ?? 1) : 1;
+        const defaultRadius = BR.Util.localStorageAvailable() ? parseInt(localStorage['wtmgRadiusValue'] ?? 1) : 1;
         const min = 0.25;
         const max = 20;
         const radiusTextInput = $('#wtmg-radius-val');
@@ -101,11 +101,14 @@ BR.LayersTab = BR.ControlLayers.extend({
 
         $('.wtmg-radius-slider-refinement').append(wtmgRadiusSlider.getElement());
 
+        $('.wtmg-radius-slider-refinement').show();
+
         const refinementElements = $('.wtmg-radius-slider-refinement');
         const controlElem = $('#wtmg-radius-control');
-        if (!controlElem.checked) {
-            refinementElements.hide();
-        }
+        // if (!controlElem.checked) {
+        //     refinementElements.hide();
+        // }
+
         controlElem.on('change', function () {
             if (this.checked) {
                 self.routing.setWTMGVisible(true);
@@ -115,6 +118,9 @@ BR.LayersTab = BR.ControlLayers.extend({
                 refinementElements.hide();
             }
         });
+        // Show by default on init
+        controlElem.prop('checked', true);
+        controlElem.trigger('change');
     },
 
     initButtons() {
@@ -505,11 +511,17 @@ BR.LayersTab = BR.ControlLayers.extend({
     storeActiveLayers() {
         if (BR.Util.localStorageAvailable()) {
             var objList = this.getActiveLayers();
-            var idList = objList.map(
-                L.bind(function (obj) {
-                    return this.toLayerString(obj);
-                }, this)
-            );
+            var idList = objList
+                .filter(
+                    L.bind(function (obj) {
+                        return this.toLayerString(obj) !== 'saved-gardens';
+                    }, this)
+                )
+                .map(
+                    L.bind(function (obj) {
+                        return this.toLayerString(obj);
+                    }, this)
+                );
             var str = JSON.stringify(idList);
 
             localStorage.setItem('map/activeLayers', str);
@@ -525,6 +537,9 @@ BR.LayersTab = BR.ControlLayers.extend({
 
                 for (var i = 0; i < idList.length; i++) {
                     var id = idList[i];
+                    if (id === 'saved-gardens') {
+                        return;
+                    }
                     var obj = this.getLayerFromString(id);
 
                     if (obj) {

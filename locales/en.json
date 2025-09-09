@@ -187,7 +187,7 @@
       "hikebike-hillshading": "Hillshading (Hike & Bike Map)",
       "hiking": "Show hiking routes",
       "hillshading": "Hillshading",
-      "osm": "OpenStreetMap",
+      "osm": "Standard OpenStreetMap",
       "osmde": "OpenStreetMap.de",
       "outdoors": "Outdoors",
       "route-quality": "Route quality coding",
@@ -419,8 +419,9 @@
       "wtmg-radius-slider": "Show gardens along route",
       "hiking-cycling-routes": "Hiking & cycling routes",
       "saved-gardens": "Show saved gardens",
-      "rail-network": "Railway network",
-      "train-layer": "Show train network"
+      "rail-network": "Background map",
+      "train-layer": "Show train network",
+      "extra-features": "Show WTMG gardens"
     },
     "profile": {
       "apply": "Apply",

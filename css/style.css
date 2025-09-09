@@ -1280,3 +1280,49 @@ If this acts up, check how the "routing path quality" was implemented, there a c
 #map > .leaflet-map-pane canvas {
     z-index: 201;
 }
+
+.wtmg-extra-features {
+    border-radius: 2px;
+    background: #ec9570;
+    font-size: 0.9em;
+    padding: 0.2em 0.7em;
+    color: white;
+    margin-left: 0.3em;
+    border: 1px solid #a7a7a7;
+    margin-top: 0.3em;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* Hide the extra features button when a member*/
+html.member .wtmg-extra-features {
+    display: none;
+}
+
+/* Hacky layers-as-title overrides */
+#layers-control-wrapper .leaflet-control-layers-separator {
+    display: none;
+}
+
+#layers-control-wrapper .leaflet-control-layers-overlays > label:nth-child(1),
+#layers-control-wrapper .leaflet-control-layers-overlays > label:nth-child(4),
+.railway-hacky-header {
+    pointer-events: none;
+    font-weight: 600;
+    margin-top: 0.3rem;
+    height: unset;
+    margin-bottom: 0.2rem;
+}
+
+.leaflet-control-layers-overlays > label:nth-child(1) input,
+.leaflet-control-layers-overlays > label:nth-child(4) input {
+    display: none;
+}
+
+html:not(.member) .leaflet-control-layers-base,
+html:not(.member) #layers-control-wrapper .leaflet-control-layers-overlays > label:nth-child(1),
+html:not(.member) .railway-hacky-header,
+html:not(.member) #layers-control-wrapper .leaflet-control-layers-overlays > label:nth-child(4),
+html:not(.member) #leaflet-control-layers-overlays-wtmg-radius-slider {
+    display: none;
+}

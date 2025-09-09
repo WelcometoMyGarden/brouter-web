@@ -46,7 +46,7 @@ BR.WTMGRadiusSlider = L.Class.extend({
 
         this.getElement().title = this.options.title;
 
-        this.options.callback(value / 100);
+        this.options.callback(value);
 
         if (this.options.muteKeyCode) {
             L.DomEvent.addListener(document, 'keydown', this._keydownListener, this);
@@ -62,7 +62,7 @@ BR.WTMGRadiusSlider = L.Class.extend({
 
     _keyupListener(e) {
         if (BR.Util.keyboardShortcutsAllowed(e) && e.keyCode === this.options.muteKeyCode) {
-            this.options.callback(this.input.val() / 100);
+            this.options.callback(this.input.val());
         }
     },
 

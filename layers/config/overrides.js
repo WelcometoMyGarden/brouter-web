@@ -235,6 +235,14 @@ BR.confLayers.getPropertyOverrides = function() {
             },
             'mapUrl': 'http://hiking.waymarkedtrails.org/#?map={zoom}!{lat}!{lon}'
         },
+        'cycling-title': {
+            'name': i18next.t('sidebar.layers.hiking-cycling-routes'),
+            'nameShort': "HS"
+        },
+        'wtmg-gardens-title': {
+            'name': i18next.t('sidebar.layers.wtmg-gardens'),
+            'nameShort': 'WG'
+        },
         'Waymarked_Trails-MTB': {
             'nameShort': 'MTB',
             'mapUrl': 'http://mtb.waymarkedtrails.org/#?map={zoom}!{lat}!{lon}'

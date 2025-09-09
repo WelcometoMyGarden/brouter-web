@@ -1462,60 +1462,45 @@
                                     ><i class="fa fa-expand"></i></span
                                 ><span data-i18n="sidebar.layers.title">Layers</span>
                             </h1>
-                            <div id="wtmg-garden-setting">
-                                <h2>
-                                    <span data-i18n="sidebar.layers.wtmg-gardens">WTMG gardens</span>
-                                    <span class="member-only-label" data-i18n="wtmg.members">Members</span>
-                                </h2>
-                                <div id="leaflet-control-layers-overlays-opacity-slider" hidden>
-                                    <label data-i18n="sidebar.layers.overlay-opacity">Overlay transparency</label>
-                                </div>
-                                <div id="leaflet-control-layers-overlays-wtmg-radius-slider">
-                                    <input
-                                        class="member-only leaflet-control-layers-selector"
-                                        id="wtmg-radius-control"
-                                        type="checkbox"
-                                        checked
-                                        name="wtmg-radius-control"
-                                    />
-                                    <label for="wtmg-radius-control">
-                                        <span data-i18n="sidebar.layers.wtmg-radius-slider"
-                                            >Show gardens along route</span
-                                        ></label
-                                    >
-                                    <div class="wtmg-radius-slider-refinement">
-                                        <div>
-                                            <input
-                                                class="member-only"
-                                                type="number"
-                                                min="0"
-                                                max="20"
-                                                id="wtmg-radius-val"
-                                                style="width: 4rem; margin: 0rem 0 0.1rem 0.7rem; font-weight: bold"
-                                            />
-                                            km
-                                        </div>
+                            <!-- Leaflet will insert its layers and overlay controls in this div -->
+                            <label class="railway-hacky-header"
+                                ><span data-i18n="sidebar.layers.rail-network">Railway network</span></label
+                            >
+                            <div id="layers-control-wrapper"></div>
+                            <div id="leaflet-control-layers-overlays-opacity-slider" hidden>
+                                <label data-i18n="sidebar.layers.overlay-opacity">Overlay transparency</label>
+                            </div>
+                            <div id="leaflet-control-layers-overlays-wtmg-radius-slider">
+                                <input
+                                    class="member-only leaflet-control-layers-selector"
+                                    id="wtmg-radius-control"
+                                    type="checkbox"
+                                    checked
+                                    name="wtmg-radius-control"
+                                />
+                                <label for="wtmg-radius-control">
+                                    <span data-i18n="sidebar.layers.wtmg-radius-slider"
+                                        >Show gardens along route</span
+                                    ></label
+                                >
+                                <div class="wtmg-radius-slider-refinement">
+                                    <div>
+                                        <input
+                                            class="member-only"
+                                            type="number"
+                                            min="0"
+                                            max="20"
+                                            id="wtmg-radius-val"
+                                            style="width: 4rem; margin: 0rem 0 0.1rem 0.7rem; font-weight: bold"
+                                        />
+                                        km
                                     </div>
                                 </div>
-                                <div class="leaflet-control-layers-saved-gardens"></div>
                             </div>
-                            <h2 data-i18n="sidebar.layers.hiking-cycling-routes">Hiking & cycling routes</h2>
-                            <div class="leaflet-control-layers-overlays-wtmg"></div>
-                            <div class="leaflet-control-layers-overlays-rail">
-                                <h2>
-                                    <span data-i18n="sidebar.layers.rail-network">Railway network</span>
-                                    <span class="member-only-label" data-i18n="wtmg.members">Members</span>
-                                </h2>
-
-                                <label
-                                    ><div>
-                                        <input type="checkbox" class="leaflet-control-layers-selector member-only" />
-                                        <span data-i18n="sidebar.layers.train-layer"> Show train network</span>
-                                    </div></label
-                                >
-                            </div>
-                            <!-- Leaflet will insert its layers and overlay controls in this div -->
-                            <div id="layers-control-wrapper" style="display: none"></div>
+                            <div class="leaflet-control-layers-saved-gardens"></div>
+                            <button class="wtmg-extra-features" data-i18n="sidebar.layers.extra-features">
+                                Show WTMG gardens
+                            </button>
                             <div id="layers-button-group">
                                 <div hidden id="tree-button-group">
                                     <button
