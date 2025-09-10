@@ -317,7 +317,7 @@ BR.Routing = L.Routing.extend({
         }
     },
     setWTMGRadius(kms) {
-        if (this._wtmgRadius === +kms) {
+        if (this._wtmgRadius === +kms || kms == null || Number.isNaN(kms)) {
             return;
         }
         this._wtmgRadius = +kms;

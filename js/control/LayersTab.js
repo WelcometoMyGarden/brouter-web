@@ -93,7 +93,7 @@ BR.LayersTab = BR.ControlLayers.extend({
                 inputValue = min;
                 radiusTextInput.val(min);
             }
-            if (self.routing) {
+            if (self.routing && !Number.isNaN(inputValue)) {
                 self.routing.setWTMGRadius(inputValue);
                 wtmgRadiusSlider.setValue(inputValue);
             }
