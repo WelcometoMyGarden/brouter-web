@@ -338,7 +338,8 @@ BR.Routing = L.Routing.extend({
         // Save hidden status
         // If this is the first segment, isHidden() will always report true due to no data
         // being available yet in the layer
-        const wasHidden = this._poiRadius.isHidden() && currentSegments !== 1;
+        const radiusCheckbox = $('#wtmg-radius-control');
+        const wasHidden = (this._poiRadius.isHidden() && currentSegments !== 1) || !radiusCheckbox.prop('checked');
 
         this._poiRadius.clearLayers();
         // Reset poi buffer
