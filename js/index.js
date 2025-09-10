@@ -618,10 +618,10 @@
             // Enable member only features
             // $('.member-only, #wtmg-garden-setting input').attr('disabled', false);
             // Activate saved gardens by default for members
-            const savedGardenLayer = layersControl.getLayerFromString('saved-gardens');
-            if (savedGardenLayer) {
-                layersControl.activateLayer(savedGardenLayer);
-            }
+            // const savedGardenLayer = layersControl.getLayerFromString('saved-gardens');
+            // if (savedGardenLayer) {
+            //     layersControl.activateLayer(savedGardenLayer);
+            // }
 
             activated = true;
             isActivating = false;

@@ -415,13 +415,13 @@
       },
       "title": "Layers",
       "tooltip": "Select layers",
-      "wtmg-gardens": "WTMG gardens",
+      "wtmg-gardens": "WTMG gardens 🏕️",
       "wtmg-radius-slider": "Show gardens along route",
-      "hiking-cycling-routes": "Hiking & cycling routes",
+      "hiking-cycling-routes": "Cycling & hiking routes 🚲🥾",
       "saved-gardens": "Show saved gardens",
-      "rail-network": "Background map",
+      "rail-network": "Background map 🗺️",
       "train-layer": "Show train network",
-      "extra-features": "Show WTMG gardens"
+      "extra-features": "Show WTMG gardens \nalong&nbsp;your&nbsp;route"
     },
     "profile": {
       "apply": "Apply",

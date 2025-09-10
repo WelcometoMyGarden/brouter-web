@@ -141,7 +141,7 @@
       "hikebike-hillshading": "Hillshading (Hike & Bike Map)",
       "hiking": "Toon wandelroutes",
       "hillshading": "Bergschaduw",
-      "osm": "",
+      "osm": "Standaard OpenStreetMap",
       "osmde": "OpenStreetMap.de",
       "outdoors": "Outdoors",
       "route-quality": "Routekwaliteitscodering",
@@ -294,11 +294,11 @@
       "tooltip": "Selecteer lagen",
       "wtmg-radius-slider": "Toon tuinen langs route",
       "saved-gardens": "Toon bewaarde tuinen",
-      "wtmg-gardens": "WTMG-tuinen",
-      "hiking-cycling-routes": "Fiets- en wandelroutes",
+      "wtmg-gardens": "WTMG-tuinen 🏕️",
+      "hiking-cycling-routes": "Fiets- en wandelroutes 🚲🥾",
       "train-layer": "Toon treinnetwerk",
-      "rail-network": "Achtergrondkaart",
-      "extra-features": "Toon WTMG-tuinen"
+      "rail-network": "Achtergrondkaart 🗺️",
+      "extra-features": "Toon WTMG-tuinen\nlangs&nbsp;jouw&nbsp;route"
     },
     "profile": {
       "apply": "Pas toe",

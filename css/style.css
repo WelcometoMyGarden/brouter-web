@@ -797,12 +797,8 @@ table.dataTable.display tbody tr:hover.selected {
 #layers-control-wrapper label {
     /* override Bootstrap/Reboot label */
     display: block;
-    margin-bottom: 0px;
-    /* normalize label height
-                    | Firefox | Chrome |
-       Leaflet only | 21      | 20     |
-       Bootstrap    | 23      | 22     |*/
-    height: 23px;
+    margin-bottom: 5px;
+    height: auto;
 }
 
 .custom_layers_url {
@@ -1293,6 +1289,7 @@ If this acts up, check how the "routing path quality" was implemented, there a c
     margin-top: 0.3em;
     margin-left: 0;
     margin-right: 0;
+    max-width: 15rem;
 }
 
 /* Hide the extra features button when a member*/
@@ -1305,6 +1302,7 @@ html.member .wtmg-extra-features {
     display: none;
 }
 
+/* Hacky layers-as-headers  */
 #layers-control-wrapper .leaflet-control-layers-overlays > label:nth-child(1),
 #layers-control-wrapper .leaflet-control-layers-overlays > label:nth-child(4),
 .railway-hacky-header {

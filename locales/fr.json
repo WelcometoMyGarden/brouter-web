@@ -299,11 +299,11 @@
       "tooltip": "Sélection des calques",
       "wtmg-radius-slider": "Afficher les jardins le long de l’itinéraire",
       "saved-gardens": "Afficher les jardins sauvegardés",
-      "wtmg-gardens": "Jardins WTMG",
-      "hiking-cycling-routes": "Itinéraires cyclables et de randonnées",
+      "wtmg-gardens": "Jardins WTMG 🏕️",
+      "hiking-cycling-routes": "Itinéraires cyclables et de randonnées 🚲🥾",
       "train-layer": "Afficher le réseau ferroviaire",
-      "rail-network": "Carte de fond",
-      "extra-features": "Afficher les jardins WTMG"
+      "rail-network": "Carte de fond 🗺️",
+      "extra-features": "Afficher les jardins WTMG\nle&nbsp;long&nbsp;de&nbsp;votre&nbsp;itinéraire"
     },
     "profile": {
       "apply": "Appliquer",
