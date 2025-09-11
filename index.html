@@ -4,6 +4,8 @@
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <!-- By default, don't index the routeplanner -->
+        <meta class="noindex" name="robots" content="noindex" />
         <!-- Favicons -->
         <link
             rel="apple-touch-icon"
@@ -72,6 +74,41 @@
         <!-- end favicons -->
 
         <title>Route Planner | Welcome To My Garden</title>
+        <script>
+            // We don't want the brouter-web subdomain apps to be used directly, they need access
+            // to context via an iframe parent
+            // This is a JS redirect. For indexing reasons, this should probably be refactored into
+            // a 303 redirect or something, potentially using a permanently expected query param
+            // in iframe URLs.
+            function redirectIfNecessary() {
+                if (
+                    window.self !== window.top
+                    // || ['localhost', '127.0.0.1'].includes(window.location.hostname)
+                ) {
+                    <!-- An attempt to let robots index the iframe when it is an iframe -->
+                    document.head.querySelector('.noindex').remove();
+                    return;
+                }
+
+                let targetUrl = new URL(window.location.href);
+                targetUrl.pathname = '/routeplanner';
+
+                if (window.location.host === 'routeplanner.welcometomygarden.org') {
+                    targetUrl.host = 'welcometomygarden.org';
+                }
+                if (window.location.host === 'routeplanner-beta.welcometomygarden.org') {
+                    targetUrl.host = 'beta.welcometomygarden.org';
+                }
+                if (['localhost', '127.0.0.1'].includes(window.location.hostname)) {
+                    targetUrl.host = 'localhost:5173';
+                }
+
+                // Redirect
+                window.location.replace(targetUrl.toString());
+            }
+
+            redirectIfNecessary();
+        </script>
 
         <!-- inject:css -->
         <link rel="stylesheet" href="dist/brouter-web.css" />
