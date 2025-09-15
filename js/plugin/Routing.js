@@ -325,7 +325,13 @@ BR.Routing = L.Routing.extend({
     },
     getWTMGIcon() {
         var currentZoom = this._map.getZoom();
-        const desiredSize = Math.min(30, (currentZoom - 5) * 5);
+        var minSize = 27; // zl 10
+        var maxSize = 40; // zl 14
+
+        const desiredSize = Math.max(
+            minSize,
+            Math.min(maxSize, minSize + ((currentZoom - 10) * (maxSize - minSize)) / 4)
+        );
         let newIcon = new BR.WTMGIcon(undefined, { iconSize: [desiredSize, desiredSize] });
         return newIcon;
     },
