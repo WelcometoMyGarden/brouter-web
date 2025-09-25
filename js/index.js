@@ -451,7 +451,7 @@
             BR.stravaSegments(map, layersControl);
         }
 
-        BR.tracksLoader(map, layersControl, routing, pois);
+        // BR.tracksLoader(map, layersControl, routing, pois);
 
         BR.routeLoader(map, layersControl, routing, pois);
 

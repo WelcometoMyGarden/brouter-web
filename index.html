@@ -211,59 +211,23 @@
                             <span data-i18n="navbar.share">Share</span>
                         </a>
                     </div>
-                    <div class="nav-item dropdown">
+                    <div class="nav-item">
                         <a
-                            class="nav-link dropdown-toggle"
-                            data-toggle="dropdown"
-                            href="#"
+                            id="navbarLoadEditTracks"
+                            class="nav-link plausible-event-name=upload-edit-nav"
+                            data-toggle="modal"
+                            data-target="#loadedittrack"
+                            data-i18n="[title]keyboard.generic-shortcut"
+                            data-i18n-options='{ "action": "$t(trackasroute.title)", "key": "$t(keyboard.shift)+O" }'
                             role="button"
-                            id="navbarLoadDropdown"
+                            href="#"
                             aria-haspopup="true"
                             aria-expanded="false"
-                            data-i18n="[title]navbar.load.tooltip"
-                            data-i18n-options='{
-                                "tracksAction": "$t(navbar.load.tracks)",
-                                "tracksKey": "O",
-                                "trackAsRouteAction": "$t(trackasroute.title)",
-                                "trackAsRouteKey": "$t(keyboard.shift)+O",
-                                "nogosAction": "$t(navbar.load.nogos)",
-                                "nogosKey": "$t(keyboard.shift)+N"
-                            }'
                             title="Load route"
                         >
                             <span class="fa fa-lg fa-upload" aria-hidden="true"> </span>
-                            <span data-i18n="navbar.load.title">Load</span>
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarLoadDropdown">
-                            <div id="navbarLoadTracksContainer">
-                                <a
-                                    class="dropdown-item plausible-event-name=upload-display-nav"
-                                    data-i18n="navbar.load.tracks"
-                                    href="#"
-                                    id="navbarLoadTracks"
-                                    >Tracks</a
-                                >
-                            </div>
-                            <div id="navbarLoadEditTracksContainer">
-                                <a
-                                    class="dropdown-item plausible-event-name=upload-edit-nav"
-                                    data-i18n="trackasroute.title"
-                                    data-toggle="modal"
-                                    data-target="#loadedittrack"
-                                    href="#"
-                                    id="navbarLoadEditTracks"
-                                    >Track as Route</a
-                                >
-                            </div>
-                            <a
-                                class="dropdown-item"
-                                data-i18n="navbar.load.nogos"
-                                data-toggle="modal"
-                                data-target="#loadNogos"
-                                href="#"
-                                >No-go areas</a
-                            >
-                        </div>
+                            <span data-i18n="trackasroute.title">Upload track</span></a
+                        >
                     </div>
                     <div
                         class="nav-item"
