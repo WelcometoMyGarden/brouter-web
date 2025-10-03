@@ -47,7 +47,7 @@
     "include_waypoints": "Points de passage",
     "route-from-to": "{{from}} -> {{to}} ({{distance}} km)",
     "route-loop": "{{from}} ({{distance}} km)",
-    "title": "Exporter l'itinéraire",
+    "title": "Télécharger l'itinéraire",
     "trackname": "Nom"
   },
   "footer": {
@@ -195,7 +195,7 @@
       "second": "2nde alternative",
       "third": "3ème alternative"
     },
-    "export": "Exporter",
+    "export": "Télécharger",
     "export-tooltip": "Exporter l'itinéraire",
     "load": {
       "nogos": "Charger des zones interdites",
@@ -227,7 +227,8 @@
     },
     "profile-tooltip": "\n(touche {{key}} pour échanger)",
     "tutorial": "Tutoriel",
-    "wtmg": "Allez sur WTMG"
+    "wtmg": "Allez sur WTMG",
+    "upload": "Uploader"
   },
   "searchfav": {
     "addfavorite": "Ajouter comme favori",
@@ -321,11 +322,11 @@
     "browse": "Parcourir",
     "explainpoi": "(afficher les points de passage comme des PIs)",
     "explaintracklayer": "(afficher la piste comme un calque distinct)",
-    "file": "Fichier de piste",
+    "file": "",
     "fuzziness": "Lissage",
     "pleasewait": "Merci de patienter !",
     "showpois": "PIs",
-    "title": "Charger une trace",
+    "title": "Uploader un itinéraire",
     "tracklayer": "Calque de trace",
     "tuning": "Réglages"
   },

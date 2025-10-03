@@ -38,7 +38,7 @@
     "include_waypoints": "Waypoints",
     "route-from-to": "{{from}} -> {{to}} ({{distance}}km)",
     "route-loop": "{{from}} ({{distance}}km)",
-    "title": "Exportar ruta",
+    "title": "",
     "trackname": "Nombre"
   },
   "footer": {
@@ -182,7 +182,7 @@
       "second": "2ª Alternativa",
       "third": "3ª Alternativa"
     },
-    "export": "Exportar",
+    "export": "",
     "export-tooltip": "Exportar ruta",
     "load": {
       "nogos": "Cargar áreas prohibidas",
@@ -299,7 +299,7 @@
     "browse": "Navegar",
     "explainpoi": "(mostrar waypoints como PDI)",
     "explaintracklayer": "(mostrar la pista como una capa separada)",
-    "file": "Trackfile",
+    "file": "",
     "fuzziness": "Borrosidad",
     "pleasewait": "Espere",
     "showpois": "PDI",

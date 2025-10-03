@@ -38,7 +38,7 @@
     "include_waypoints": "Uğraknoktaları",
     "route-from-to": "{{from}} -> {{to}} ({{distance}}km)",
     "route-loop": "{{from}} ({{distance}}km)",
-    "title": "Yolu dışa aktar",
+    "title": "",
     "trackname": "İsim"
   },
   "footer": {
@@ -182,7 +182,7 @@
       "second": "2. alternatif",
       "third": "3. alternatif"
     },
-    "export": "Export",
+    "export": "",
     "export-tooltip": "Yolu dışa aktar",
     "load": {
       "nogos": "Kullanılmayan alanları yükle",
@@ -299,7 +299,7 @@
     "browse": "Göz at",
     "explainpoi": "(yol noktalarını POI'ler olarak göster)",
     "explaintracklayer": "(show Track as separate Layer)",
-    "file": "Trackfile",
+    "file": "",
     "fuzziness": "Fuzziness",
     "pleasewait": "Please wait!",
     "showpois": "POI'ler",

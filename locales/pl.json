@@ -38,7 +38,7 @@
     "include_waypoints": "Punkty trasy",
     "route-from-to": "{{from}} -> {{to}} ({{distance}} km)",
     "route-loop": "{{from}} ({{distance}} km)",
-    "title": "Eksportuj trasę",
+    "title": "",
     "trackname": "Nazwa"
   },
   "footer": {
@@ -182,7 +182,7 @@
       "second": "Alternatywa nr 2",
       "third": "Alternatywa nr 3"
     },
-    "export": "Eksportuj",
+    "export": "",
     "export-tooltip": "Eksportuj trasę",
     "load": {
       "nogos": "Wczytaj obszary omijania",
@@ -299,7 +299,7 @@
     "browse": "Przeglądaj",
     "explainpoi": "(pokaż punkty trasy jako POI)",
     "explaintracklayer": "(pokaż ślad jako osobną warstwę)",
-    "file": "Plik śladu",
+    "file": "",
     "fuzziness": "Dopasowanie",
     "pleasewait": "Proszę czekać!",
     "showpois": "Interesujące punkty",

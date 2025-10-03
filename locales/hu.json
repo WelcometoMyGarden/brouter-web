@@ -38,7 +38,7 @@
     "include_waypoints": "Útpontok",
     "route-from-to": "{{from}} -> {{to}} ({{distance}} km)",
     "route-loop": "{{from}} ({{distance}} km)",
-    "title": "Útvonal exportálása",
+    "title": "",
     "trackname": "Név"
   },
   "footer": {
@@ -182,7 +182,7 @@
       "second": "2. alternatíva",
       "third": "3. alternatíva"
     },
-    "export": "Exportálás",
+    "export": "",
     "export-tooltip": "Útvonal exportálása",
     "load": {
       "nogos": "Elkerülendő területek betöltése",
@@ -299,7 +299,7 @@
     "browse": "Böngészése",
     "explainpoi": "(útpontok megjelenítése érdekes pontként [POI-ként])",
     "explaintracklayer": "(nyomvonal megjelenítés különálló rétegként)",
-    "file": "Nyomvonalfájl",
+    "file": "",
     "fuzziness": "Homályosság",
     "pleasewait": "Kérjük, várjon",
     "showpois": "Érdekes pontok (POI-k)",

@@ -38,7 +38,7 @@
     "include_waypoints": "Vojpunktoj",
     "route-from-to": "{{from}} → {{to}} ({{distance}} km)",
     "route-loop": "{{from}} ({{distance}} km)",
-    "title": "Eksporti Itinero",
+    "title": "",
     "trackname": "Nomo"
   },
   "footer": {
@@ -182,7 +182,7 @@
       "second": "2-a alternativo",
       "third": "3-a alternativo"
     },
-    "export": "Eksporti",
+    "export": "",
     "export-tooltip": "Eksporti itineron",
     "load": {
       "nogos": "Load no-go areas",
@@ -299,7 +299,7 @@
     "browse": "Browse",
     "explainpoi": "(show waypoints as POI's)",
     "explaintracklayer": "(show Track as separate Layer)",
-    "file": "Trackfile",
+    "file": "",
     "fuzziness": "Fuzziness",
     "pleasewait": "Please wait!",
     "showpois": "POI's",

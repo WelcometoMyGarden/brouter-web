@@ -38,7 +38,7 @@
     "include_waypoints": "Waypoints",
     "route-from-to": "{{from}}->{{to}}({{distance}}km)",
     "route-loop": "{{from}}({{distance}}km)",
-    "title": "Exportera rutt",
+    "title": "",
     "trackname": "Namn"
   },
   "footer": {
@@ -182,7 +182,7 @@
       "second": "2:a alternativet",
       "third": "3:e alternativet"
     },
-    "export": "Exportera",
+    "export": "",
     "export-tooltip": "Exportera rutt",
     "load": {
       "nogos": "Load no-go areas",
@@ -299,7 +299,7 @@
     "browse": "Browse",
     "explainpoi": "(show waypoints as POI's)",
     "explaintracklayer": "(show Track as separate Layer)",
-    "file": "Trackfile",
+    "file": "",
     "fuzziness": "Fuzziness",
     "pleasewait": "Please wait!",
     "showpois": "POI's",

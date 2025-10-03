@@ -38,7 +38,7 @@
     "include_waypoints": "Fites",
     "route-from-to": "{{from}} -> {{to}} ({{distance}}km)",
     "route-loop": "{{from}} ({{distance}}km)",
-    "title": "Exporta la ruta",
+    "title": "",
     "trackname": "Nom"
   },
   "footer": {
@@ -182,7 +182,7 @@
       "second": "2a alternativa",
       "third": "3a alternativa"
     },
-    "export": "Exporta",
+    "export": "",
     "export-tooltip": "Exporta la ruta",
     "load": {
       "nogos": "Carrega les àrees omeses",
@@ -299,7 +299,7 @@
     "browse": "Navega",
     "explainpoi": "(mostra les fites com a PDI)",
     "explaintracklayer": "(mostra traces com a capa separada)",
-    "file": "Fitxer de traça",
+    "file": "",
     "fuzziness": "Grau d'aproximació",
     "pleasewait": "Espereu si us plau.",
     "showpois": "PDI",

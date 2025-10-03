@@ -38,7 +38,7 @@
     "include_waypoints": "Veipunkter",
     "route-from-to": "{{from}} -> {{to}} ({{distance}}km)",
     "route-loop": "{{from}} ({{distance}}km)",
-    "title": "Eksporter rute",
+    "title": "",
     "trackname": "Navn"
   },
   "footer": {
@@ -182,7 +182,7 @@
       "second": "Andre alternativ",
       "third": "Tredje alternativ"
     },
-    "export": "Eksporter",
+    "export": "",
     "export-tooltip": "Exporter rute",
     "load": {
       "nogos": "Last no-go områder",
@@ -299,7 +299,7 @@
     "browse": "Bla gjennom",
     "explainpoi": "(show waypoints as POI's)",
     "explaintracklayer": "(show Track as separate Layer)",
-    "file": "Trackfile",
+    "file": "",
     "fuzziness": "Fuzziness",
     "pleasewait": "Vennligst vent!",
     "showpois": "POI's",

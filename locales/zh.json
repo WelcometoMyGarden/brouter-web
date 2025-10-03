@@ -182,7 +182,7 @@
       "second": "第二替代方案",
       "third": "第三替代方案"
     },
-    "export": "匯出",
+    "export": "",
     "export-tooltip": "匯出路徑",
     "load": {
       "nogos": "載入禁止進入區域",
@@ -299,7 +299,7 @@
     "browse": "瀏覽",
     "explainpoi": "(顯示航點為興趣點)",
     "explaintracklayer": "(顯示路徑為單獨圖層)",
-    "file": "路徑檔案",
+    "file": "",
     "fuzziness": "模糊性",
     "pleasewait": "請等待！",
     "showpois": "興趣點",

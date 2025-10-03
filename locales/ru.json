@@ -38,7 +38,7 @@
     "include_waypoints": "Маршрутные точки",
     "route-from-to": "{{от}} -> {{до}} ({{расстояние}}км)",
     "route-loop": "{{от}} ({{расстояние}}км)",
-    "title": "Export route",
+    "title": "",
     "trackname": "Название"
   },
   "footer": {
@@ -182,7 +182,7 @@
       "second": "2nd alternative",
       "third": "3rd alternative"
     },
-    "export": "Экспорт",
+    "export": "",
     "export-tooltip": "Export route",
     "load": {
       "nogos": "Load no-go areas",
@@ -299,7 +299,7 @@
     "browse": "Browse",
     "explainpoi": "(show waypoints as POI's)",
     "explaintracklayer": "(show Track as separate Layer)",
-    "file": "Trackfile",
+    "file": "",
     "fuzziness": "Fuzziness",
     "pleasewait": "Пожалуйста подождите!",
     "showpois": "POI's",

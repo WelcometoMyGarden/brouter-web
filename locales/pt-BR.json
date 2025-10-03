@@ -38,7 +38,7 @@
     "include_waypoints": "Locais",
     "route-from-to": "{{from}} -> {{to}} ({{distance}}km)",
     "route-loop": "{{from}} ({{distance}}km)",
-    "title": "Exportar a rota",
+    "title": "",
     "trackname": "Nome"
   },
   "footer": {
@@ -182,7 +182,7 @@
       "second": "2.ª alternativa",
       "third": "3.ª alternativa"
     },
-    "export": "Exportar",
+    "export": "",
     "export-tooltip": "Exportar a rota",
     "load": {
       "nogos": "Carregar as áreas de interdição",
@@ -299,7 +299,7 @@
     "browse": "Navegue",
     "explainpoi": "(mostrar os locais como POIs)",
     "explaintracklayer": "(mostrar o Trajeto como uma Camada separada)",
-    "file": "Arquivo de trajeto",
+    "file": "",
     "fuzziness": "Imprecisão",
     "pleasewait": "Espere!",
     "showpois": "POIs",

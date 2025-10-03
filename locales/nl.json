@@ -42,7 +42,7 @@
     "include_waypoints": "Routepunten",
     "route-from-to": "{{from}} -> {{to}} ({{distance}}km)",
     "route-loop": "{{from}} ({{distance}}km)",
-    "title": "Exporteer route",
+    "title": "Download route",
     "trackname": "Naam"
   },
   "footer": {
@@ -190,7 +190,7 @@
       "second": "2e alternatief",
       "third": "3e alternatief"
     },
-    "export": "Exporteer",
+    "export": "",
     "export-tooltip": "Exporteer route",
     "load": {
       "nogos": "Laad no-go gebieden",
@@ -316,11 +316,11 @@
     "browse": "Bladeren",
     "explainpoi": "(toon routepunten als POI's)",
     "explaintracklayer": "(toon Track als losse Laag)",
-    "file": "Trackbestand",
+    "file": "Routebestand",
     "fuzziness": "Onnauwkeurigheid",
     "pleasewait": "Wacht alstublieft!",
     "showpois": "POI's",
-    "title": "Upload route",
+    "title": "Upload een route",
     "tracklayer": "Track Laag",
     "tuning": "Afstelling"
   },

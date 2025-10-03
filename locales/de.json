@@ -38,7 +38,7 @@
     "include_waypoints": "Wegpunkte",
     "route-from-to": "{{from}} -> {{to}} ({{distance}} km)",
     "route-loop": "{{from}} ({{distance}} km)",
-    "title": "Route exportieren",
+    "title": "",
     "trackname": "Name"
   },
   "footer": {
@@ -182,7 +182,7 @@
       "second": "2. Alternative",
       "third": "3. Alternative"
     },
-    "export": "Export",
+    "export": "",
     "export-tooltip": "Route exportieren",
     "load": {
       "nogos": "No-go-Areas laden",
@@ -299,7 +299,7 @@
     "browse": "Durchsuchen",
     "explainpoi": "(Wegpunkte als POIs anzeigen)",
     "explaintracklayer": "(Tour als separate Ebene anzeigen)",
-    "file": "Track-Datei",
+    "file": "",
     "fuzziness": "Unschärfe",
     "pleasewait": "Bitte warten!",
     "showpois": "POIs",
