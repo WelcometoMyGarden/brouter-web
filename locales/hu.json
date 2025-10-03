@@ -182,7 +182,7 @@
       "second": "2. alternatíva",
       "third": "3. alternatíva"
     },
-    "export": "",
+    "export": "Download",
     "export-tooltip": "Útvonal exportálása",
     "load": {
       "nogos": "Elkerülendő területek betöltése",

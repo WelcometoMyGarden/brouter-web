@@ -190,7 +190,7 @@
       "second": "2e alternatief",
       "third": "3e alternatief"
     },
-    "export": "",
+    "export": "Download",
     "export-tooltip": "Exporteer route",
     "load": {
       "nogos": "Laad no-go gebieden",
@@ -222,7 +222,8 @@
     },
     "profile-tooltip": "\n({{key}} toets om te schakelen)",
     "share": "Deel",
-    "wtmg": "Ga naar WTMG"
+    "wtmg": "Ga naar WTMG",
+    "upload": "Upload"
   },
   "searchfav": {
     "addfavorite": "als favoriet toevoegen",

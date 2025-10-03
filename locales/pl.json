@@ -182,7 +182,7 @@
       "second": "Alternatywa nr 2",
       "third": "Alternatywa nr 3"
     },
-    "export": "",
+    "export": "Download",
     "export-tooltip": "Eksportuj trasę",
     "load": {
       "nogos": "Wczytaj obszary omijania",

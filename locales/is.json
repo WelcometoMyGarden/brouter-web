@@ -182,7 +182,7 @@
       "second": "2. varaleið",
       "third": "3. varaleið"
     },
-    "export": "",
+    "export": "Download",
     "export-tooltip": "Flytja út leið",
     "load": {
       "nogos": "Hlaða inn bannsvæðum",

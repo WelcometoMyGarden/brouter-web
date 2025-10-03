@@ -182,7 +182,7 @@
       "second": "2a alternativa",
       "third": "3a alternativa"
     },
-    "export": "",
+    "export": "Download",
     "export-tooltip": "Exporta la ruta",
     "load": {
       "nogos": "Carrega les àrees omeses",

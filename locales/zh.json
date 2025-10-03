@@ -182,7 +182,7 @@
       "second": "第二替代方案",
       "third": "第三替代方案"
     },
-    "export": "",
+    "export": "Download",
     "export-tooltip": "匯出路徑",
     "load": {
       "nogos": "載入禁止進入區域",

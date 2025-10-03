@@ -182,7 +182,7 @@
       "second": "2ª alternativa",
       "third": "3ª alternativa"
     },
-    "export": "",
+    "export": "Download",
     "export-tooltip": "Exportar a rota",
     "load": {
       "nogos": "Carregar as áreas de interdição",

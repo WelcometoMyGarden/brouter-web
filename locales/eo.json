@@ -182,7 +182,7 @@
       "second": "2-a alternativo",
       "third": "3-a alternativo"
     },
-    "export": "",
+    "export": "Download",
     "export-tooltip": "Eksporti itineron",
     "load": {
       "nogos": "Load no-go areas",

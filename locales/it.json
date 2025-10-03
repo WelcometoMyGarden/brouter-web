@@ -3,5 +3,8 @@
     "layer": {
       "osm": ""
     }
+  },
+  "navbar": {
+    "export": "Download"
   }
 }

@@ -182,7 +182,7 @@
       "second": "Andre alternativ",
       "third": "Tredje alternativ"
     },
-    "export": "",
+    "export": "Download",
     "export-tooltip": "Exporter rute",
     "load": {
       "nogos": "Last no-go områder",

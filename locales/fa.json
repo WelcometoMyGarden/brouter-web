@@ -182,7 +182,7 @@
       "second": "2nd alternative",
       "third": "3rd alternative"
     },
-    "export": "",
+    "export": "Download",
     "export-tooltip": "مسیر صادرات",
     "load": {
       "nogos": "مناطق ممنوعه را بارگیری کنید",

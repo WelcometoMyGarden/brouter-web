@@ -182,7 +182,7 @@
       "second": "2. Alternative",
       "third": "3. Alternative"
     },
-    "export": "",
+    "export": "Download",
     "export-tooltip": "Route exportieren",
     "load": {
       "nogos": "No-go-Areas laden",

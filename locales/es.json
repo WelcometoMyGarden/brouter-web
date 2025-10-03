@@ -182,7 +182,7 @@
       "second": "2ª Alternativa",
       "third": "3ª Alternativa"
     },
-    "export": "",
+    "export": "Download",
     "export-tooltip": "Exportar ruta",
     "load": {
       "nogos": "Cargar áreas prohibidas",

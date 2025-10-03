@@ -182,7 +182,7 @@
       "second": "2. alternatif",
       "third": "3. alternatif"
     },
-    "export": "",
+    "export": "Download",
     "export-tooltip": "Yolu dışa aktar",
     "load": {
       "nogos": "Kullanılmayan alanları yükle",
