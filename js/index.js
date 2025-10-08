@@ -585,7 +585,33 @@
         }
 
         $('.modal').on('shown.bs.modal', function (e) {
+            // https://getbootstrap.com/docs/3.4/javascript/#modals-events
+
             $('input:visible:enabled:first', e.target).focus();
+
+            const iframeElement = $(`<iframe
+                    width="100%"
+                    height="315"
+                    style="aspect-ratio: 16/9; height: auto"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                ></iframe>`);
+            const baseUrl = 'https://www.youtube-nocookie.com/embed/0kXZd871iT8';
+            const params = {
+                cc_lang_pref: i18next.language,
+                cc_load_policy: '1',
+            };
+            const iframeUrl = `${baseUrl}?${new URLSearchParams(params).toString()}`;
+            iframeElement.attr('src', iframeUrl);
+
+            if (e.target.id === 'tutorial') {
+                if (!$('.modal-body iframe', e.target).length) {
+                    $('.modal-body', e.target).first().append(iframeElement);
+                }
+            }
         });
 
         // TODO: this could probably be implemented more cleanly by interfacing with the registered layers
